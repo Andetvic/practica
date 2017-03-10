@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fecha</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/tema7po.css">
+  </head>
+  <body>
+
+    <section>
+      <div class="contenedor">
+
+        <h2 id="h2">La fecha</h2>
+        <p>* Segun tu sistema es</p>
+        <div>
+          <img src="images/fecha.png" alt="fecha"> <div id="fecha"></div>
+        </div>
+
+
+        <h2 id="h3">La hora</h2>
+        <p>* Segun tu sistema es</p>
+        <div>
+          <img src="images/hora.png" alt="hora"> <div id="hora"></div>
+        </div>
+
+        <h1><span id="h1"></span><br><span>Terry Victor</span></h1>
+
+      </div>
+      <div class="bloque">
+        <p>En un bloque &#60;div&#62; debajo de la fecha y la hora y las instrucciones JavaScript necesarias para que muestre en dicho bloque el contenido de las siguientes propiedades DOM  en líneas separadas, que comiencen por el nombre de la propiedad(es) mostrada(s):</p>
+        <ol type="a">
+          <li>Contenido de innerHTML de elemento identificado por id="h2"</li>
+          <pre data-lang="javascript">
+            <code>
+              var r1 = document.getElementById("h2").innerHTML;
+              var rpta1;
+              document.getElementById("rpta1").innerHTML = r1;
+              <div id="rpta1"></div>
+            </code>
+          </pre>
+
+          <li>Contenido de outerHTML de elemento identificado por id="h1"</li>
+          <pre data-lang="javascript">
+            <code>
+              var r2 = document.getElementById("h1").outerHTML;
+              var rpta2;
+              document.getElementById("rpta2").innerHTML = r2;
+              <div id="rpta2"></div>
+            </code>
+          </pre>
+
+          <li>Contenido de de la propiedad global: location.href</li>
+          <pre data-lang="javascript">
+          <code>
+            var r3 = window:location.href;
+            var rpta3;
+            document.getElementById("rpta3").innerHTML = r3;
+            <div id="rpta3"></div>
+          </code>
+          </pre>
+
+          <li>Contenido de de la propiedad global: location</li>
+          <pre data-lang="javascript">
+          <code>
+            var r4 = window:location;
+            var rpta4;
+            document.getElementById("rpta4").innerHTML = r4;
+            <div id="rpta4"></div>
+          </code>
+          </pre>
+
+          <li>Contenido de de las propiedades globales: screen.width y screen.height</li>
+          <pre data-lang="javascript">
+          <code>
+            var r5a = window.screen.width;
+            var r5b = window.screen.height;
+            var rpta5;
+            document.getElementById("rpta5").innerHTML =
+            'Resolución:' + r5a + 'x' + r5b;
+            <div id="rpta5"></div>
+          </code>
+        </pre>
+        </ol>
+        <p>
+          En los ejercicios preferi usar window en vez de global con el fin de simplificar
+          el uso de variables para mostrar los resultados.
+        </p>
+      </div>
+    </section>
+    <footer>
+      <div class="contenedor">
+        <hr>
+        2017 | Desing By Terry
+      </div>
+    </footer>
+
+    <script type="text/javascript" src="js/tema7po.js"></script>
+  </body>
+</html>

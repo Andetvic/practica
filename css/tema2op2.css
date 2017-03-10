@@ -1,0 +1,94 @@
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraMono-Regular.eot');
+    src: url('../fonts/FiraMono-Regular.otf') format('embedded-opentype'),
+         url('../fonts/FiraMono-Regular.woff2') format('woff2'),
+         url('../fonts/FiraMono-Regular.woff') format('woff'),
+         url('../fonts/FiraMono-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraMono-Medium.eot');
+    src: url('../fonts/FiraMono-Medium.otf') format('embedded-opentype'),
+         url('../fonts/FiraMono-Medium.woff2') format('woff2'),
+         url('../fonts/FiraMono-Medium.woff') format('woff'),
+         url('../fonts/FiraMono-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraMono-Bold.eot');
+    src: url('../fonts/FiraMono-Bold.otf') format('embedded-opentype'),
+         url('../fonts/FiraMono-Bold.woff2') format('woff2'),
+         url('../fonts/FiraMono-Bold.woff') format('woff'),
+         url('../fonts/FiraMono-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Fira Sans Book';
+    src: url('../fonts/FiraSans-Book.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Fira Sans Thin';
+    src: url('../fonts/FiraSans-Thin.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Italic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face{
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+}
+.contenedor {
+  max-width: 800px;
+  margin: auto;
+}
+h2 {
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 2em;
+}
+h3 {
+  font-family: Roboto;
+}
+.texto {
+  font-family: Fira Sans Book;
+  font-size: 20px;
+  text-align: justify;
+}
+.pie {
+  background: black;
+  color: white;
+  font-family: Roboto;
+  font-size: 36px;
+  line-height: 70px;
+  text-align: center;
+}
+.pie a {
+  text-decoration: none;
+  color: steelblue;
+}

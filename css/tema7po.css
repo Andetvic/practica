@@ -1,0 +1,29 @@
+h1 {font-size: 3em;}
+.contenedor {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 640px;
+  text-align: center;
+}
+.contenedor h2 {margin-bottom: 0px;}
+.contenedor p {margin-top: 0px;}
+.contenedor img {
+  vertical-align: bottom;
+  width: 50px;
+}
+#hora {font-size: 3em;display: inline-block;}
+#fecha {font-size: 2.2em; text-transform: capitalize;display: inline-block;}
+.bloque {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 640px;
+  padding: 0px 20px;
+}
+.bloque pre {background: #3d3d46; color: gainsboro; border-radius: 10px;}
+.bloque pre code div {width: 75%; margin: auto;}
+
+@media screen and (max-width: 480px) {
+  .bloque ol, .bloque li {margin: 0px; padding-left: 10px;}
+  .bloque pre {padding: 10px; white-space: normal; overflow-x: auto; tab-size: 2;}
+  .bloque code {font-size: 12px; }
+}

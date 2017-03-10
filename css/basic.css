@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body
+{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+}
+a {text-decoration: none;}
+.contenedor
+{
+  margin: auto;
+  max-width: 800px;
+  padding: 10px 20px;
+}
+.contenedor li
+{
+  list-style-type: square;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="css/m5t7ef.css">
+
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/m5t7ef.js"></script>
+    
+  </head>
+  <body>
+    <div class="contenedor">
+      <input id="btnOculta" type="button" value="Mostrar">
+      <section id="oculta">
+        <h3>MÓDULO 5: BUCLES. ARRAYS. FUNCIONES COMO OBJETOS. ÁMBITOS. CIERRES. JQUERY</h3>
+        <h2>Entrega P2P Obligatoria <br>
+        Entrega.</h2>
+        <p>Modificar la calculadora del ejemplo anterior para que realice todos sus accesos a elementos DOM y toda la gestión de eventos con las funciones de la librería jQuery.</p>
+        <p>La calculadora debe mostrar al principio el título:</p>
+        <p>“Buenos días, bienvenido a la calculadora de &#60;nombre y apellido de la persona&#62;”</p>
+        <p>Integrar además en una sola calculadora los siguientes botones de operaciones matemáticas:</p>
+        <p>
+        1) Operaciones unitarias (con un solo operando):<br>
+        &#160;&#160;&#160;1.1) x^2 (número elevado al cuadrado)<br>
+        &#160;&#160;&#160;1.2) 1/x (inverso del número)<br>
+        &#160;&#160;&#160;1.3) sqrt(x) (raiz cuadrada del número)<br>
+        &#160;&#160;&#160;1.4) parte_entera(x) (parte entera de x:<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;si x es positivo devuelve Math.floor(x)<br>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;y si es negativo devuelve -Math.ceil(x))<br>
+        &#160;&#160;&#160;1.5) 2^n (potencia n del número 2)<br>
+        &#160;&#160;&#160;1.6) n! (factorial del número n: n*(n-1)*(n-2)*...*3*2*1)<br>
+        </p><p>
+        2) Operaciones binarias (con dos operandos):<br>
+        &#160;&#160;&#160;2.1) +. -. *, / (suma, resta, multiplicación y división)<br>
+        &#160;&#160;&#160;2.2) x^y (x elevado a y)<br>
+        </p><p>
+        3) Operaciones con n operandos introducidos en formato CSV:<br>
+        &#160;&#160;&#160;3.1)  sumatorio(x) (sumatorio de n números)<br>
+        &#160;&#160;&#160;3.2) producto(x) (producto de n números)<br>
+        </p>
+        <p>Subir dicha aplicación a la cuenta de neocities.org</p>
+      </section>
+      <section>
+        <article class="titulo">
+          <h1 id="saludo"></h1>
+          <h2>Bienvenido a la Calculadora de<br>
+            Terry Tataje</h2>
+        </article>
+        <div class="marco">
+          <form>
+            <input id="pantalla" class="panel">
+
+            <div class="linea">
+              <input id="productox" class="tecla funci" type="button" value="p(x)" title="Producto">
+              <input id="sumatorix" class="tecla funci" type="button" value="Σ(x)" title="Sumatoria">
+              <input id="cuadrado" class="tecla funci" type="button" value="x2" title="Cuadrado">
+              <input id="potencia" class="tecla funci" type="button" value="x^y" title="Potencia">
+              <input id="probable" class="tecla funci" type="button" value="1/x" title="Probabilidad">
+            </div>
+            <div class="linea">
+              <input id="entero" class="tecla funci" type="button" value="[x]" title="Parte Entera">
+              <input id="limpiar" class="tecla flaqi" type="button" value="CE">
+              <input id="porcentaje" class="tecla norma" type="button" value="%" title="Porcentaje">
+              <input id="borra" class="tecla" type="button" value="⇦">
+              <input id="divide" class="tecla flaqi" type="button" value="÷">
+            </div>
+            <div class="linea">
+              <input id="radical" class="tecla funci" type="button" value="&#8730;" title="Raiz Cuadrada">
+              <input id="n7" class="tecla" type="button" value="7">
+              <input id="n8" class="tecla" type="button" value="8">
+              <input id="n9" class="tecla" type="button" value="9">
+              <input id="multiplica" class="tecla flaqi" type="button" value="x">
+            </div>
+            <div class="linea">
+              <input id="factorial" class="tecla funci" type="button" value="x!" title="Factorial">
+              <input id="n4" class="tecla" type="button" value="4">
+              <input id="n5" class="tecla" type="button" value="5">
+              <input id="n6" class="tecla" type="button" value="6">
+              <input id="resta" class="tecla flaqi" type="button" value="-">
+            </div>
+            <div class="linea">
+              <input id="opuesto" class="tecla flaqi" type="button" value="&#177;" title="Negativo">
+              <input id="n1" class="tecla" type="button" value="1">
+              <input id="n2" class="tecla" type="button" value="2">
+              <input id="n3" class="tecla" type="button" value="3">
+              <input id="suma" class="tecla flaqi" type="button" value="+">
+            </div>
+            <div class="linea">
+              <input id="parentesisI" class="tecla flaqi" type="button" value="(">
+              <input id="parentesisF" class="tecla flaqi" type="button" value=")">
+              <input id="n0" class="tecla" type="button" value="0">
+              <input id="punto" class="tecla" type="button" value=".">
+              <input id="igual" class="tecla flaqi" type="button" value="=">
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="contenedor">
+          <p>2017 - Design by Terry</p>
+        </div>
+      </footer>
+
+    </div>
+  </body>
+</html>

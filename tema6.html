@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Herencia</title>
+  <link rel="stylesheet" href="css/tema6.css">
+</head>
+<body>
+
+  <div class="pregunta">
+    <h3>Tema 6. Ejercicio P2P opcional</h3>
+    <p>
+    Realizar en el siguiente HTML 5 declaraciones de estilo CSS que afecten al mismo elemento,
+    el titular h1, con diferentes puntuaciones de prioridad,
+    e indicar su puntuación como un comentario en el propio HTML
+    </p>
+  </div>
+
+  <div id="caja">
+
+    <header class="cabecera">
+      <h1 class="titulo">Cabecera: <span class="color">header</span></h1>
+    </header>
+
+  </div>
+
+  <section class="respuesta">
+    <blockquote class="centrar j1">
+      <h4>▼ Nivel 4</h4>
+      Contenedor div identificado con el id caja, aqui indicamos que el tamaño de la fuente sera 26px esta propiedad la heredaran los demas elementos "hijos".
+    </blockquote>
+    <blockquote class="centrar j2">
+      <h4>▼ Nivel 3</h4>
+      Contenedor header identificado con la class cabecera, aqui se centrar el texto esta propiedad sera heredada por todos los elementos que se encuentren dentro de este div.
+    </blockquote>
+    <blockquote class="centrar j3">
+      <h4>▼ Nivel 2</h4>
+      etiqueta lineal h1 identificada con la class titulo, aqui se establecera el color de fuente marron.
+    </blockquote>
+    <blockquote class="centrar j4">
+      <h4>▼ Nivel 1</h4>
+      etiqueta lineal span identificada con la class color, aqui cambiaremos el color de fuente a azul
+    </blockquote>
+  </section>
+
+</body>
+</html>

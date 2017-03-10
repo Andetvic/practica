@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans');
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 2.1em;
+  font-family: 'Bree Serif', serif;
+}
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+h1 a:hover {
+  text-shadow: -2px 0 black, 0 2px gray, 2px 0 black, 0 -2px black;
+  color: rgba(255,255,255,.9);
+}
+h3 {font-size: 1.3em;}
+h4 {font-size: 1.2em;}
+h5 {font-size: 1em; margin-top: 0px; padding-top: 0px;}
+footer, .superior {
+  background: #4c4c4c; /* Old browsers */
+  background: -moz-linear-gradient(top, #4c4c4c 0%, #595959 12%, #666666 25%, #474747 39%, #2c2c2c 50%, #000000 51%, #111111 60%, #2b2b2b 76%, #1c1c1c 91%, #131313 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+  color: white;
+}
+.superior ul {margin: 0px; padding: 0px;}
+.superior li {display: inline-block;list-style-type: none; margin: 3px 5px;}
+.superior li a {color: white;}
+.cabecera {
+  text-align: center;
+}
+.contenedor {
+  margin: auto;
+  max-width: 800px;
+  padding: 10px 20px;
+}
+.conbtn {
+  padding: 0;
+  margin: 0;
+}
+.btndb {
+  background: gray;
+  border-radius: 10px;
+  display: inline-block;
+  line-height: 35px;
+  margin: 0px 5px;
+  width: 150px;
+  list-style-type: none;
+}
+.btndb a {
+  color: white;
+  text-decoration: none;
+}
+.btndb:hover {
+  box-shadow: 0 0 3px 3px rgba(200,200,200,1);
+}
+
+.fa {
+  vertical-align: middle;
+}
+.resumen li {
+  list-style-type: square;
+}
+.cajon {
+  display: inline-block;
+  vertical-align: top;
+  width: 47%;
+  margin: 0px 1%;
+}
+.videoContenedor {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+.videoContenedor iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.caja {
+  display: inline-block;
+  vertical-align: top;
+  width: 22%;
+  margin: 0px 1%;
+}
+.caja p {font-size: 14px;}
+.conocimientos li {
+  display: inline-block;
+  width: 22%;
+  margin: 1%;
+  list-style-type: none;
+  text-align: center;
+}
+.conocimientos img {display: block;}
+.conocimientos span {display: none;}
+.fix0 {width: 167px; margin: auto;}
+.fix1 {width: 167px; padding-bottom: 25px;}
+.fix2 {width: 140px; margin: auto; padding-bottom: 10px;}
+.fix3 {width: 130px; margin: auto;}
+.fix4 {width: 130px; margin: auto;}
+.fix5 {width: 130px; margin: auto; padding-bottom: 20px;}
+.fix6 {width: 140px; margin: auto; padding-bottom: 40px;}
+.fix7 {width: 150px; margin: auto; padding-bottom: 35px;}
+.fix8 {width: 80px; margin: auto;}
+
+.expe {display: inline-block; width: 47%; margin: 1%;}
+.expe li {list-style-type: square;}
+.expe h5 {font-size: 1.1em; margin-bottom: 0px; padding-bottom: 0px;}
+.expe h6 {font-size: 1em; margin-top: 0px; margin-bottom: 0.5em;}
+
+/* Colores */
+.twitter {background: #4099ff;}
+.facebook {background: #3b5998;}
+.googleplus {background: #d34836;}
+.linkedin {background: #0e76a8;}
+
+@media screen and (max-width: 480px) {
+  .btndb {
+    border-radius: 50%;
+    line-height: 45px;
+    margin: 0px 1px;
+    width: 45px;
+    height: 45px;
+  }
+  .btndb span {display: none;}
+  .cajon {width: 100%; margin: 0px;}
+  .caja {width: 47%;}
+  .expe {display: block; width: 100%; margin: 0px;}
+  .conocimientos ul {margin: 0px; padding: 0px;}
+  .conocimientos li {
+    display: inline-block;
+    width: 47%;
+    margin: 1%;
+  }
+  .fix0,.fix1,.fix4,.fix6,.fix7 {width: 100%;}
+  .fix2 {width: 75%;}
+  .fix3 {width: 80%;}
+}

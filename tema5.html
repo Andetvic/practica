@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ejercicio opcional árbol</title>
+  <link rel="stylesheet" href="css/tema5.css">
+
+  <link rel="stylesheet" href="css/prettify.css"/>
+  <link rel="stylesheet" href="css/jquery.jOrgChart.css"/>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="js/jquery.jOrgChart.js"></script>
+  <script type="text/javascript" src="js/prettify.js"></script>
+
+  <script>
+  jQuery(document).ready(function() {
+      $("#org").jOrgChart({
+          chartElement : '#chart',
+          dragAndDrop  : true
+      });
+  });
+  </script>
+</head>
+<body>
+  <br>
+  <header>
+    <div class="alert-message info" id="show-list">Mostrar Lista.</div>
+    <pre class="prettyprint lang-html" id="list-html" style="display:none"></pre>
+  </header>
+
+  <div id="chart" class="orgChart"></div>
+
+    <ul id="org" style="display:none">
+      <li>
+        !doctype html -
+        html
+        <ul>
+          <li>
+            head
+            <ul>
+              <li>meta charset="utf-8" </li>
+              <li>title: Ejercicio opcional árbol </li>
+            </ul>
+          </li>
+          <li>body
+            <ul>
+              <li>
+                header
+                <ul>
+                  <li><img src="images/firefox-os.png" alt="FirefoxOS Logo" height="60"></li>
+                </ul>
+              </li>
+              <li>
+                  nav
+                  <ul>
+                    <li>li: Menú 1 </li>
+                    <li>li: Menú 2 </li>
+                    <li>li: Menú 3 </li>
+                  </ul>
+              </li>
+              <li>
+                article
+                <ul>
+                  <li>h1: Titular de nivel 1 </li>
+                  <li>p: Contenido de la página/p </li>
+                </ul>
+              </li>
+              <li>footer: Pie de página</li>
+            </ul>
+          </li>
+
+        </ul>
+      </li>
+    </ul>
+
+    <script>
+        jQuery(document).ready(function() {
+
+            /* Custom jQuery for the example */
+            $("#show-list").click(function(e){
+                e.preventDefault();
+
+                $('#list-html').toggle('fast', function(){
+                    if($(this).is(':visible')){
+                        $('#show-list').text('Ocultar Lista.');
+                        $(".topbar").fadeTo('fast',0.9);
+                    }else{
+                        $('#show-list').text('Mostrar Lista.');
+                        $(".topbar").fadeTo('fast',1);
+                    }
+                });
+            });
+
+            $('#list-html').text($('#org').html());
+
+            $("#org").bind("DOMSubtreeModified", function() {
+                $('#list-html').text('');
+
+                $('#list-html').text($('#org').html());
+
+                prettyPrint();
+            });
+        });
+    </script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+  <div class="htmlAcomodado">
+
+    <header>
+      <img src="images/firefox-os.png" alt="FirefoxOS Logo" width="200"
+      height="164">
+    </header>
+    <nav>
+      <ul>
+        <li>Menú 1</li>
+        <li>Menú 2</li>
+        <li>Menú 3</li>
+      </ul>
+    </nav>
+    <article>
+      <h1>Titular de nivel 1</h1>
+      <p>Contenido de la página</p>
+    </article>
+    <footer>Pie de página</footer>
+
+  </div>
+
+</body>
+</html>

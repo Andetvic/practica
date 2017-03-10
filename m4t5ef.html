@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculadora</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link rel="stylesheet" href="css/m4t5ef.css">
+  </head>
+  <body>
+    <div class="contenedor">
+      <input id="btnOculta" type="button" value="Mostrar" onclick="muestraOculta()">
+      <section id="oculta" style="display:none;">
+        <h2>Entrega P2P obligatoria</h2>
+        <h3>Entrega.</h3>
+        <p>Añadir a la calculadora el siguiente título:</p>
+        <p>“Buenos días, bienvenido a la calculadora de &#60;nombre y apellido de la persona&#62;”</p>
+        <p>Integrar además en una sola calculadora los siguientes botones de operaciones matemáticas:</p>
+        <ol>
+          <li>Operaciones unitarias (con un solo operando):</li>
+          <ol type="a">
+            <li>x^2 (número elevado al cuadrado)</li>
+            <li>1/x (inverso del número)</li>
+            <li>sqrt(x) (raiz cuadrada del número)</li>
+            <li>parte_entera(x) (parte entera de x: si x es positivo devuelve Math.floor(x) y si es negativo devuelve -Math.ceil(x))</li>
+          </ol>
+          <li>Operaciones binarias (con dos operandos):</li>
+          <ol type="a">
+            <li>+. -. *, / (suma, resta, multiplicación y división)</li>
+            <li>x^y (x elevado a y)</li>
+          </ol>
+        </ol>
+      </section>
+      <section>
+        <article class="titulo">
+          <h1 id="saludo">Saludo</h1>
+          <h2>Bienvenido a la Calculadora de<br>
+            Terry Tataje</h2>
+        </article>
+        <div class="marco">
+          <form>
+            <input id="pantalla" class="panel" onKeyPress="return validar(event)">
+            <div class="linea">
+              <input id="ciento" class="tecla" type="button" onClick="if (opera(this.form.pantalla.value)) { porcentaje(this.form) }" value="%">
+              <input id="radical" class="tecla" type="button" onClick="if (opera(this.form.pantalla.value)) { raiz(this.form) }" value="&#8730;">
+              <input id="potencia" class="tecla" type="button" onClick="if (opera(this.form.pantalla.value)) { cuadrado(this.form) }" value="x2">
+              <input id="probable" class="tecla" type="button" onClick="if (opera(this.form.pantalla.value)) { probabilidad(this.form) }" value="1/x">
+            </div>
+            <div class="linea">
+              <input id="nuevo" class="tecla" type="button" onClick="this.form.pantalla.value = 0 " value="CE">
+              <input id="potencia2" class="tecla" type="button" onClick="agrega(this.form.pantalla, '^')" value="x^y">
+              <input id="borrar" class="tecla" type="button" onClick="borra(this.form.pantalla)" value="⇦">
+              <input id="divide" class="tecla" type="button"  onclick="agrega(this.form.pantalla, '/')" value="÷">
+            </div>
+            <div class="linea">
+              <input id="n7" class="tecla" type="button" onClick="agrega(this.form.pantalla, '7')" value="7">
+              <input id="n8" class="tecla" type="button" onClick="agrega(this.form.pantalla, '8')" value="8">
+              <input id="n9" class="tecla" type="button" onClick="agrega(this.form.pantalla, '9')" value="9">
+              <input id="multiplica" class="tecla" type="button" onClick="agrega(this.form.pantalla, '*')" value="x">
+            </div>
+            <div class="linea">
+              <input id="n4" class="tecla" type="button" onClick="agrega(this.form.pantalla, '4')" value="4">
+              <input id="n5" class="tecla" type="button" onClick="agrega(this.form.pantalla, '5')" value="5">
+              <input id="n6" class="tecla" type="button" onClick="agrega(this.form.pantalla, '6')" value="6">
+              <input id="resta" class="tecla" type="button" onClick="agrega(this.form.pantalla, '-')" value="-">
+            </div>
+            <div class="linea">
+              <input id="n1" class="tecla" type="button" onClick="agrega(this.form.pantalla, '1')" value="1">
+              <input id="n2" class="tecla" type="button" onClick="agrega(this.form.pantalla, '2')" value="2">
+              <input id="n3" class="tecla" type="button" onClick="agrega(this.form.pantalla, '3')" value="3">
+              <input id="suma" class="tecla" type="button" onClick="agrega(this.form.pantalla, '+')" value="+">
+            </div>
+            <div class="linea">
+              <input id="opuesto" class="tecla" type="button" onClick="invertir(this.form.pantalla)" value="&#177;">
+              <input id="n0" class="tecla" type="button" onClick="agrega(this.form.pantalla, '0')" value="0">
+              <input id="punto" class="tecla" type="button" onClick="agrega(this.form.pantalla, '.')" value=".">
+              <input id="igual" class="tecla" type="button" onClick="if (opera(this.form.pantalla.value)) { final(this.form) }" value="=">
+            </div>
+          </form>
+        </div>
+      </section>
+      <footer>
+        <div class="contenedor">
+          <p>2017 - Design by Terry</p>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="js/m4t5ef.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,48 @@
+#saludo {
+  font-size: 2em;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+#btnOculta {
+  background: white;
+  border: 2px solid black;
+  font-size: 1em;
+  font-family: sans-serif;
+  padding: 10px;
+}
+.titulo {text-align: center;}
+.titulo h2 {padding-top: 0px; margin-top: 0px;}
+.contenedor {
+  font-family: sans-serif;
+  margin: auto;
+  max-width: 640px;
+}
+.marco {
+  margin: auto;
+  width: 320px;
+}
+.panel {
+  border: 2px solid black;
+  font-size: 1.6em;
+  padding: 0px 20px;
+  text-align: right;
+  width: 80%;
+  line-height: 60px;
+}
+.linea {
+  margin: auto;
+}
+.tecla {
+  background: #ffffff;
+  border: none;
+  line-height: 200%;
+  margin: 1%;
+  font-size: 1.5em;
+  font-weight: bold;
+  width: 64px;
+  height: 61px;
+  vertical-align: bottom;
+}
+.fuente {
+  font-family: serif;
+}
