@@ -88,6 +88,17 @@ $(function(){
   	$('#pantalla').val(total);
   }
 
+  function sumatoria() {
+    var str = $('#pantalla').val()
+    var len = $('#pantalla').val().length;
+    var sum
+    for (x=0; x<len; x++) {
+      pen = str.substr(x,[1])
+      sum += pen
+    }
+    $('#pantalla').val(sum);
+  }
+
   function invertir() {
     var valor = $('#pantalla').val();
     if(valor.substring(0, 1) == "-")
@@ -176,6 +187,9 @@ $(function(){
   $('#factor').on('click',function() {
     factorial()
   });
+  $('#sumatorix').on('click',function() {
+    sumatoria()
+  });
   $('#limpiar').on('click',function() {
     $('#pantalla').val('');
   });
@@ -185,4 +199,9 @@ $(function(){
   $('#igual').on('click',function() {
     opera();
   });
+
+  $(document).keydown(function(tecla) {
+   if (tecla.keyCode == 127) {
+     borra();
+  }});
 });
