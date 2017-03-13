@@ -11,6 +11,7 @@
   padding: 10px;
 }
 .titulo {text-align: center;}
+.titulo h1 {display: inline-block;}
 .titulo h2 {padding-top: 0px; margin-top: 0px;}
 .contenedor {
   font-family: sans-serif;

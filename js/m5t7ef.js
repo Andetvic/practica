@@ -16,6 +16,7 @@ $(function(){
   }
 
   $('#saludo').html(msj);
+
   $('#oculta').css({'display':'none'});
 
   $('#btnOculta').click(function() {
@@ -27,6 +28,12 @@ $(function(){
         $('#btnOculta').val('Mostrar');
       }
     });
+  });
+
+  $('#to').css({'display':'none'});
+
+  $('#obo').on('click',function() {
+    $('#to').toggle('fast', function() {});
   });
 
   function agrega(character) {
@@ -90,13 +97,32 @@ $(function(){
 
   function sumatoria() {
     var str = $('#pantalla').val()
-    var len = $('#pantalla').val().length;
-    var sum
-    for (x=0; x<len; x++) {
-      pen = str.substr(x,[1])
-      sum += pen
+    var sum = 0;
+    for (x = 0; x < str.length; x++) {
+      pen = str.charAt(x);
+      sum += eval(pen);
     }
     $('#pantalla').val(sum);
+  }
+
+  function producto() {
+    var str = $('#pantalla').val()
+    var sum = 1;
+    for (x = 0; x < str.length; x++) {
+      pen = str.charAt(x);
+      sum = sum * eval(pen);
+    }
+    $('#pantalla').val(sum);
+  }
+
+  function parteEntera() {
+    var str = $('#pantalla').val()
+    if (str > 0) {
+      $('#pantalla').val(Math.floor(eval($('#pantalla').val())));
+    }
+    else {
+      $('#pantalla').val(Math.ceil(eval($('#pantalla').val())));
+    }
   }
 
   function invertir() {
@@ -189,6 +215,12 @@ $(function(){
   });
   $('#sumatorix').on('click',function() {
     sumatoria()
+  });
+  $('#productox').on('click',function() {
+    producto()
+  });
+  $('#entero').on('click',function() {
+    parteEntera()
   });
   $('#limpiar').on('click',function() {
     $('#pantalla').val('');
