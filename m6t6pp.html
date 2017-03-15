@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menú Plegable</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/m6t6pp.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/m6t6pp.js"></script>
+  </head>
+  <body>
+    <section>
+      <div id="info7" class="container oculto">
+        <h3>MÓDULO 6: JQUERY UI. INTERACCIÓN CON USUARIO. BOOTSTRAP. DISEÑO ADAPTATIVO</h3>
+        <h2>Ejercicio P2P opcional</h2>
+        <p>Realizar un menú plegable (collapse) con una de sus opciones 'Music' desplegable (dropdown ) con bootstrap, para las siguientes opciones:</p>
+        <ul>
+          <li>Welcome</li>
+          <li>Featured</li>
+          <li>People</li>
+          <li>Music</li>
+          <li>Mixes</li>
+          <li>Videos</li>
+          <li>Radio</li>
+        </ul>
+      </div>
+    </section>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Navegación toggle</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Practica P2P</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse navbar-right">
+            <ul class="nav navbar-nav">
+              <li><a href="#info1" class="inf"><i class="fa fa-home" aria-hidden="true"></i> <span>Saludos</span></a></li>
+              <li><a href="#info2" class="inf"><i class="fa fa-exclamation" aria-hidden="true"></i> <span>Destacado</span></a></li>
+              <li><a href="#info3" class="inf"><i class="fa fa-users" aria-hidden="true"></i> <span>Gente</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-headphones" aria-hidden="true"></i> <span>Musica</span> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.lastmusica.com/baladas/" target="_blank">Balada</a></li>
+                  <li><a href="http://www.ladiscoteca.org/estilos/disco-funk/" target="_blank">Disco</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li class="dropdown-header">Popular</li>
+                  <li><a href="http://www.fullvicio.com/reggaeton/" target="_blank">Regueton</a></li>
+                  <li><a href="http://www.fullvicio.com/pop/" target="_blank">Pop</a></li>
+                </ul>
+              </li>
+              <li><a href="#info4" class="inf"><i class="fa fa-mixcloud" aria-hidden="true"></i> <span>Mixes</span></a></li>
+              <li><a href="#info5" class="inf"><i class="fa fa-video-camera" aria-hidden="true"></i> <span>Videos</span></a></li>
+              <li><a href="#info6" class="inf"><i class="fa fa-volume-up" aria-hidden="true"></i> <span>Radio</span></a></li>
+              <li><a href="#info7" class="inf"><i class="fa fa-question" aria-hidden="true"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <article id="info1" class="container oculto">
+        <h1><i class="fa fa-home" aria-hidden="true"></i> Saludos</h1>
+        <div class="jumbotron">
+          <h2 id="saludo"></h2>
+          <p>Estimado visitante sea usted bienvenido a nuestra página aqui encontrara una pequeña muestra de las capacidades del Framework bootstrap</p>
+        </div>
+      </article>
+      <article id="info2" class="container oculto">
+        <h1><i class="fa fa-exclamation" aria-hidden="true"></i> Destacado</h1>
+        <div class="">
+          <p>Esta practica se realizo utilizando:</p>
+          <div class="clearfix">
+            <div class="col-md-3 col-xs-6">
+              <a href="https://developer.mozilla.org/es/docs/HTML/HTML5" target="_self"><img class="img-responsive img-thumbnail" src="images/HTML5_logo.svg" alt="Logo HTML 5" title="Logo HTML 5"></a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS3" target="_self"><img class="img-responsive img-thumbnail" src="images/css3_logo.svg" alt="Logo CSS 3" title="Logo CSS 3"></a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_self"><img class="img-responsive img-thumbnail" src="images/JavaScript_logo.svg" alt="Logo JavaScript" title="Logo JavaScript"></a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <a href="https://es.wikipedia.org/wiki/JQuery" target="_self"><img class="img-responsive img-thumbnail" src="images/jquery.svg" alt="Logo jquery 3.11" title="Logo jquery 3.11"></a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <a href="https://librosweb.es/libro/bootstrap_3/" target="_self"><img class="img-responsive img-thumbnail" src="images/Boostrap.svg" alt="Logo Bootstrap" title="Logo Bootstrap"></a>
+            </div>
+            <div class="col-md-3 col-xs-6">
+              <a href="https://guillermocarvajal.net/tipografia/usando-font-awesome-more-2/" target="_self"><img class="img-responsive img-thumbnail" src="images/font_awesome.svg" alt="Logo Font Awesome" title="Logo Font Awesome"></a>
+            </div>
+          </div>
+          <br>
+          <div>
+            <blockquote>
+              <p class="text-center">Todos en las versiones mas actuales a la fecha 14/03/2017.</p>
+            </blockquote>
+          </div>
+        </div>
+      </article>
+      <article id="info3" class="container oculto">
+        <h1><i class="fa fa-users" aria-hidden="true"></i> Gente</h1>
+        <div class="jumbotron">
+          <p>Este trabajo fue realizado por <a href="mailto:t5t6pe@gmail.com">Terry Victor</a> puedes seguirme en estas redes sociales:</p>
+          <div class="clearfix">
+            <div class="col-md-4 col-xs-6">
+              <a href="https://www.facebook.com/terry.tataje"><img class="img-responsive img-circle" src="https://scontent.flim1-2.fna.fbcdn.net/v/t1.0-9/14355157_10202113665278479_6463123241635940323_n.jpg?oh=4904126ca53d0ee54d427a46d251d068&oe=592DA825" alt="Facebook" Title="Facebook">
+              <figcaption class="text-center">facebook</figcaption></a>
+            </div>
+            <div class="col-md-4 col-xs-6">
+              <a href="https://twitter.com/t5t6pe"><img class="img-responsive img-circle" src="https://pbs.twimg.com/profile_images/761314521411489792/2De0iCrx.jpg" alt="Twitter" Title="Twitter">
+              <figcaption class="text-center">twitter</figcaption></a>
+            </div>
+            <div class="col-md-4 col-xs-6">
+              <a href="https://plus.google.com/+TerryVictorTatajeTirado"><img class="img-responsive img-circle" src="https://lh3.googleusercontent.com/D10XjQYRSO0skdCC_d-mb4-eXmFUKUO0kWDupbrs7NYbnxKEw3iCczNJ4jzk7d_Q7_t8QlBpERJT1p8=w1920-h1080-rw-no" alt="Google+" Title="Google+">
+              <figcaption class="text-center">Google+</figcaption></a>
+            </div>
+          </div>
+
+        </div>
+      </article>
+      <article id="info4" class="container oculto">
+        <h1><i class="fa fa-mixcloud" aria-hidden="true"></i> Mixes</h1>
+        <div class="jumbotron">
+          <div class="leap">
+            <p>Aquí algunas paginas donde encontraras musica combinada/mixes (Son paginas con mucha publicidad pero funcionan a la fecha d ela publicacion de esta practica):</p>
+            <ul class="nav nav-pills">
+              <li><a class="btn btn-info btn-lg" href="http://www.fullvicio.com/dj/dj-mix/">Full Vicio</a></li>
+              <li><a class="btn btn-info btn-lg" href="http://www.estabulla.com/dj-mix">EstaBulla</a> </li>
+              <li><a class="btn btn-info btn-lg" href="http://www.intermusika.org/escucha/reggaeton-mix/">InterMusika</a></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+      <article id="info5" class="container oculto">
+        <h1><i class="fa fa-video-camera" aria-hidden="true"></i> Videos</h1>
+        <div class="jumbotron">
+          <p>Aqui ahi un video que me gusta:</p>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A33os1bJ73o?list=PLGdihshEIEEgZ1BqpXFCtlNeGgrXnX6FO" allowfullscreen></iframe>
+          </div>
+
+        </div>
+      </article>
+      <article id="info6" class="container oculto">
+        <h1><i class="fa fa-volume-up" aria-hidden="true"></i> Radio</h1>
+        <div class="jumbotron">
+          <p class="leap">Si quieres escuchar las radios de mi pais pincha <a href="http://www.radios.com.pe/" target="_blank">aquí</a></p>
+
+        </div>
+        </iframe>
+      </article>
+    </section>
+    <footer>
+      <div class="container">
+          <p>Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
