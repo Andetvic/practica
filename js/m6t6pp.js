@@ -17,6 +17,7 @@ $(function(){
   $('#saludo').html(msj);
 
   $(".oculto").hide();
+  $('#info1').show()
   $(".inf").click(function(){
     var nodo = $(this).attr("href");
 
@@ -25,7 +26,7 @@ $(function(){
       return false;
     }else{
       $(".oculto").hide("slow");
-      $(nodo).fadeToggle("fast");
+      $(nodo).fadeToggle('fast');
       return false;
     }
   });
