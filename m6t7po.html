@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrusel</title>
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+  <link rel="stylesheet" href="css/m6t7po.css">
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="js/m6t7po.js"></script>
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Navegación toggle</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Practica PO</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse navbar-right">
+          <ul class="nav navbar-nav">
+            <li><a href="#" title="Calculadora JQuery">
+              <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
+              </span>
+            </a></li>
+            <li><a href="#" title="Tangram JQueryUI">
+              <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
+              </span>
+            </a></li>
+            <li><a href="#" title="Menu bootstrap">
+              <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+              </span>
+            </a></li>
+            <li><a href="#info7" class="inf" title="Información">
+              <span class="fa-stack">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-question fa-stack-1x fa-inverse"></i>
+              </span>
+            </a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <!-- Carousel -->
+
+    <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="1"></li>
+        <li data-target="#bootstrap-touch-slider" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper For Slides -->
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Third Slide -->
+        <div class="item active">
+
+          <!-- Slide Background -->
+          <img src="images/ban1.jpg" alt="Calculadora JQuery"  class="slide-image"/>
+          <div class="bs-slider-overlay"></div>
+
+          <div class="container">
+            <div class="row">
+              <!-- Slide Text Layer -->
+              <div class="slide-text slide_style_left">
+                <h1 data-animation="animated zoomInRight">Calculadora</h1>
+                <p data-animation="animated fadeInLeft">Una sencilla calculadora hecha con jQuery.</p>
+                <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInLeft">Ver calculadora</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fin of Slide -->
+
+        <!-- Second Slide -->
+        <div class="item">
+
+          <!-- Slide Background -->
+          <img src="images/ban2.jpg" alt="Tangram"  class="slide-image"/>
+          <div class="bs-slider-overlay"></div>
+          <!-- Slide Text Layer -->
+          <div class="slide-text slide_style_center">
+            <h1 data-animation="animated flipInX">Tangram</h1>
+            <p data-animation="animated lightSpeedIn">Un pequeño juego hecho con jQueryUI.</p>
+            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInUp">Ver Tangram</a>
+          </div>
+        </div>
+        <!-- Fin of Slide -->
+
+        <!-- Third Slide -->
+        <div class="item">
+
+          <!-- Slide Background -->
+          <img src="images/ban3.jpg" alt="Menu Responsivo"  class="slide-image"/>
+          <div class="bs-slider-overlay"></div>
+          <!-- Slide Text Layer -->
+          <div class="slide-text slide_style_right">
+            <h1 data-animation="animated zoomInLeft">Menu responsivo</h1>
+            <p data-animation="animated fadeInRight">Un ejemplo practico del potencia del Framework bootstrap.</p>
+            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInLeft">Ver Menu Responsivo</a>
+          </div>
+        </div>
+        <!-- Fin of Slide -->
+
+      </div><!-- Fin of Wrapper For Slides -->
+
+      <!-- Left Control -->
+      <a class="left carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="prev">
+        <span class="fa fa-angle-left" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+
+      <!-- Right Control -->
+      <a class="right carousel-control" href="#bootstrap-touch-slider" role="button" data-slide="next">
+        <span class="fa fa-angle-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+
+    </div>
+    <!-- Fin  bootstrap-touch-slider Slider -->
+    <!-- /.carousel -->
+  </section>
+
+  <section>
+    <div id="info7" class="container miriadaX oculto">
+      <h3>MÓDULO 6: JQUERY UI. INTERACCIÓN CON USUARIO. BOOTSTRAP. DISEÑO ADAPTATIVO</h3>
+      <h2>Entrega P2P obligatoria</h2>
+      <h4>Entrega.</h4>
+      <p>Integrar en el ejemplo del carrusel realizado con Bootstrap en la última actividad la calculadora desarrollada como entrega P2P final del modulo 5 que utiliza jQuery e incluye todas las teclas de operaciones unitarias, binarias y n-arias.</p>
+      <p>La calculadora integrada debe estar accesible desde todos los enlaces del carrusel:</p>
+      <ul class="guion">
+        <li>Barra de navegación superior</li>
+        <li>Foto de la calculadora en el carrusel</li>
+        <li>Botonera inferior</li>
+      </ul>
+      <p>La calculadora integrada debe incluir una barra de navegación adaptable a pantallas estrechas y anchas, similar a la que se incluyo en la integración del puzzle.</p>
+      <p>Subir el carrusel completo basado en bootstrap con el puzzle y la calculadora integrados a la cuenta de neocities.org</p>
+      <p>Parte opcional de la entrega: Para practicar con el uso de jQuery UI, pueden añadir a la calculadora una memoria donde almacenar el valor del cajetín. El contenido de esta memoria deberá hacerse visible en la página Web, por ejemplo cerca del cajetín. Para mover el contenido de uno a otro se deben añadir 2 teclas a la calculadora:</p>
+      <ul class="guion">
+        <li>ToM: mueve el número del cajetín a la memoria</li>
+        <li>FromM: mueve el número de la memoria al cajetín</li>
+      </ul>
+      <p>El contenido del cajetín debe poder arrastrarse también con el ratón para depositar en la memoria, utilizando las interacciones draggable y droppable de jQuery UI. Un último paso más difícil es permitir arrastrar en sentido inverso.</p>
+      <p>Algunas sugerencias para implementar el arrastre del cajetín a la memoria:</p>
+      <ol>
+        <li>Usar bloque &#60;div contentEditable=“true” …&#62; en vez de &#60;input type=“text” …&#62; para introducir el número y delimitar el cajetin con los comandos CSS border, hight y width.</li>
+        <li>Usar un bloque &#60;div&#62; para la memoria donde guardar el número. Delimitar esta zona también con los comandos CSS border, hight y width.</li>
+        <li>Inicializar  la función draggable al menos con las opciones {revert: "invalid",  helper:"clone"} para que retorne si no llega al destino y para que no desplace el cajetín original.</li>
+        <li>Inicializar  la función dropable al menos con las opciones {activeClass:"act",  drop:function(event, ui){…}} para indicar con activeClass cual es el destino (memoria) y para definir con drop el manejador del ejvento que copia el contenido. El manejador tendrá un código similar al del botón ToM.</li>
+      </ol>
+      <p>Pueden encontrar las instrucciones en:</p>
+      <p>
+        <a href="http://www.desarrolloweb.com/manuales/manual-jqueryui.html" target="_blank">http://www.desarrolloweb.com/manuales/manual-jqueryui.html</a><br>
+        <a href="https://jqueryui.com/" target="_blank">https://jqueryui.com/</a><br>
+        <a href="http://api.jqueryui.com/" target="_blank">http://api.jqueryui.com/</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Three columns of text below the carousel -->
+  <section class="container marketing">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+          <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Calculadora</h2>
+        <p>Una sencilla calculadora hecha con JQuery.</p>
+        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
+          <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Tangram</h2>
+        <p>Un pequeño juego hecho con la JQueryUI.</p>
+        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-warning"></i>
+          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Menú Responsivo</h2>
+        <p>Un ejemplo practico del potencial de bootstrap.</p>
+        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
+      </div>
+    </div><!-- /.col-lg-4 -->
+  </section><!-- /.row -->
+
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="col-md-4 col-xs-12">
+            <ul class="social">
+              <li class="facebook"><a href="https://www.facebook.com/terry.tataje"><i class="fa fa-facebook fa-3x"></i></a></li>
+              <li class="twitter"><a href="https://twitter.com/t5t6pe"><i class="fa fa-twitter fa-3x"></i></a></li>
+              <li class="google"><a href="https://plus.google.com/+TerryVictorTatajeTirado?hl=es"><i class="fa fa-google-plus fa-3x"></i></a></li>
+              <li class="linkedin"><a href="https://www.linkedin.com/in/terry-victor-tataje-tirado-6a622b2a/"><i class="fa fa-linkedin fa-3x"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 col-xs-12">
+
+          </div>
+          <div class="col-md-4 col-xs-12">
+            <p>Cel: <a href="tel:+519972504989">(51)997 250 489</a><br>
+              Lima - Perú</p>
+            <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
