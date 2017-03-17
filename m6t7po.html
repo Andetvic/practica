@@ -9,14 +9,19 @@
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-  <link rel="stylesheet" href="css/m6t7po.css">
+  <link href="css/m6t7po.css" rel="stylesheet" media="all">
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
+  <script src="js/calculadora.js" type="text/javascript"></script>
+  <script src="js/tangram.js" type="text/javascript"></script>
   <script src="js/m6t7po.js"></script>
 </head>
 <body>
-
+  <span class="ir-arriba fa fa-arrow-up"></span>
   <header>
     <nav class="navbar navbar-default">
       <div class="container">
@@ -31,29 +36,33 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#" title="Calculadora JQuery">
+            <li><a href="#info1" class="inf" title="Calculadora JQuery">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
               </span>
+              <span class="textoMenu">Calculadora</span>
             </a></li>
-            <li><a href="#" title="Tangram JQueryUI">
+            <li><a href="#info2" class="inf" title="Tangram JQueryUI">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
               </span>
+              <span class="textoMenu">Tangram</span>
             </a></li>
-            <li><a href="#" title="Menu bootstrap">
+            <li><a href="#info3" class="inf" title="Menú bootstrap">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
               </span>
+              <span class="textoMenu">Menú</span>
             </a></li>
-            <li><a href="#info7" class="inf" title="Información">
+            <li><a href="#info4" class="inf" title="Información">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-question fa-stack-1x fa-inverse"></i>
               </span>
+              <span class="textoMenu">Detalles</span>
             </a></li>
           </ul>
         </div>
@@ -89,7 +98,7 @@
               <div class="slide-text slide_style_left">
                 <h1 data-animation="animated zoomInRight">Calculadora</h1>
                 <p data-animation="animated fadeInLeft">Una sencilla calculadora hecha con jQuery.</p>
-                <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInLeft">Ver calculadora</a>
+                <a href="#info1" title="Calculadora JQuery" target="_blank" class="btn btn-primary inf" data-animation="animated fadeInLeft">Ver calculadora</a>
               </div>
             </div>
           </div>
@@ -106,7 +115,7 @@
           <div class="slide-text slide_style_center">
             <h1 data-animation="animated flipInX">Tangram</h1>
             <p data-animation="animated lightSpeedIn">Un pequeño juego hecho con jQueryUI.</p>
-            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInUp">Ver Tangram</a>
+            <a href="#info2" title="Calculadora JQuery" target="_blank" class="btn btn-primary inf" data-animation="animated fadeInUp">Ver Tangram</a>
           </div>
         </div>
         <!-- Fin of Slide -->
@@ -121,7 +130,7 @@
           <div class="slide-text slide_style_right">
             <h1 data-animation="animated zoomInLeft">Menu responsivo</h1>
             <p data-animation="animated fadeInRight">Un ejemplo practico del potencia del Framework bootstrap.</p>
-            <a href="#" target="_blank" class="btn btn-primary" data-animation="animated fadeInLeft">Ver Menu Responsivo</a>
+            <a href="#info3" title="Calculadora JQuery" target="_blank" class="btn btn-primary inf" data-animation="animated fadeInLeft">Ver Menu Responsivo</a>
           </div>
         </div>
         <!-- Fin of Slide -->
@@ -145,8 +154,188 @@
     <!-- /.carousel -->
   </section>
 
+  <!-- Three columns of text below the carousel -->
+  <section class="container marketing">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-primary"></i>
+          <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Calculadora</h2>
+        <p>Una sencilla calculadora hecha con JQuery.</p>
+        <p><a class="btn btn-info btn-lg inf" href="#info1" title="Calculadora JQuery" role="button">Ver ejemplo &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-success"></i>
+          <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Tangram</h2>
+        <p>Un pequeño juego hecho con la JQueryUI.</p>
+        <p><a class="btn btn-info btn-lg inf" href="#info2" title="Calculadora JQuery" role="button">Ver ejemplo &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4 col-md-4 col-xs-12">
+        <span class="fa-stack fa-lg fa-5x">
+          <i class="fa fa-circle fa-stack-2x text-warning"></i>
+          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
+        </span>
+        <h2>Menú Responsivo</h2>
+        <p>Un ejemplo practico del potencial de bootstrap.</p>
+        <p><a class="btn btn-info btn-lg inf" href="#info3" title="Calculadora JQuery" role="button">Ver ejemplo &raquo;</a></p>
+      </div>
+    </div><!-- /.col-lg-4 -->
+  </section><!-- /.row -->
+
   <section>
-    <div id="info7" class="container miriadaX oculto">
+    <div id="info1" class="container calculadora oculto">
+      <h2>Calculadora</h2>
+      <form>
+        <div class="row teclas">
+          <div class="form-group">
+            <input id="dato" class="form-control input-sm" value="">
+            <input id="pantalla" class="form-control input-lg" value="">
+            <input id="pregunta" class="form-control input-sm" value="">
+          </div>
+        </div>
+        <div class="row teclas">
+          <input id="amemoria" class="btn btn-warning btn-lg" type="button" value="M+" title="Agragar a Memoria">
+          <input id="dmemoria" class="btn btn-warning btn-lg" type="button" value="M" title="Usar dato en Memoria">
+          <input id="entero" class="btn btn-warning btn-lg" type="button" value="[x]" title="Parte Entera">
+          <input id="probable" class="btn btn-warning btn-lg" type="button" value="1/x" title="Probabilidad">
+        </div>
+        <div class="row teclas">
+          <input id="productox" class="btn btn-warning btn-lg" type="button" value="P(x)" title="Producto">
+          <input id="sumatorix" class="btn btn-warning btn-lg" type="button" value="Σ(x)" title="Sumatoria">
+          <input id="cuadrado" class="btn btn-warning btn-lg" type="button" value="x2" title="Cuadrado">
+          <input id="cubo" class="btn btn-warning btn-lg" type="button" value="x3" title="Cubo">
+          <input id="potencia" class="btn btn-warning btn-lg" type="button" value="x^y" title="Potencia">
+        </div>
+        <div class="row teclas">
+          <input id="limpiarTodo" class="btn btn-warning btn-lg" type="button" value="CE">
+          <input id="limpiar" class="btn btn-warning btn-lg" type="button" value="C">
+          <input id="porcentaje" class="btn btn-warning btn-lg" type="button" value="%" title="Porcentaje">
+          <input id="borrar" class="btn btn-warning btn-lg" type="button" value="⇦">
+          <input id="divide" class="btn btn-warning btn-lg" type="button" value="÷">
+        </div>
+        <div class="row teclas">
+          <input id="radical" class="btn btn-warning btn-lg" type="button" value="&#8730;" title="Raiz Cuadrada">
+          <input id="n7" class="btn btn-default btn-lg" type="button" value="7">
+          <input id="n8" class="btn btn-default btn-lg" type="button" value="8">
+          <input id="n9" class="btn btn-default btn-lg" type="button" value="9">
+          <input id="multiplica" class="btn btn-warning btn-lg" type="button" value="x">
+        </div>
+        <div class="row teclas">
+          <input id="factor" class="btn btn-warning btn-lg" type="button" value="x!" title="Factorial">
+          <input id="n4" class="btn btn-default btn-lg" type="button" value="4">
+          <input id="n5" class="btn btn-default btn-lg" type="button" value="5">
+          <input id="n6" class="btn btn-default btn-lg" type="button" value="6">
+          <input id="resta" class="btn btn-warning btn-lg" type="button" value="-">
+        </div>
+        <div class="row teclas">
+          <input id="opuesto" class="btn btn-warning btn-lg" type="button" value="&#177;" title="Negativo">
+          <input id="n1" class="btn btn-default btn-lg" type="button" value="1">
+          <input id="n2" class="btn btn-default btn-lg" type="button" value="2">
+          <input id="n3" class="btn btn-default btn-lg" type="button" value="3">
+          <input id="suma" class="btn btn-warning btn-lg" type="button" value="+">
+        </div>
+        <div class="row teclas">
+          <input id="parentesisI" class="btn btn-default btn-lg" type="button" value="(">
+          <input id="parentesisF" class="btn btn-default btn-lg" type="button" value=")">
+          <input id="n0" class="btn btn-default btn-lg" type="button" value="0">
+          <input id="punto" class="btn btn-default btn-lg" type="button" value=".">
+          <input id="igual" class="btn btn-warning btn-lg" type="button" value="=">
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div id="info2" class="container oculto">
+      <h2>Tangram</h2>
+      <p>Sencilla Aplicación de jquery-UI</p>
+      <div class="contenedor">
+        <div class="">
+          <img src="images/tangram1.svg" alt="Triangulo Celeste" class="draggable pieza">
+          <img src="images/tangram2.svg" alt="Triangulo Verde" class="draggable pieza">
+          <img src="images/tangram3.svg" alt="Poligono Fucsia" class="draggable pieza">
+          <img src="images/tangram4.svg" alt="Triangulo Amarillo" class="draggable pieza">
+          <img src="images/tangram5.svg" alt="Cuadrado Morado" class="draggable pieza">
+          <img src="images/tangram6.svg" alt="Triangulo Rosa" class="draggable pieza">
+          <img src="images/tangram7.svg" alt="Triangulo Naranja" class="draggable pieza">
+        </div>
+        <div id="caja" >
+          <img id="foto" src="images/soluciones.jpg" alt="Soluciones"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="info3" class="container oculto">
+      <h2>Menú Responsivo</h2>
+      <div class="table table-responsive">
+        <p>Este es el codigo que use para el menu responsivo es la parte Html, para ver el ejemplo haz click <a href="m6t6pp.html">Aquí</a></p>
+        <pre class="prettyprint">
+          <code class="language-html">
+            &#60;header&#62;
+              &#60;nav class="navbar navbar-default"&#62;
+                &#60;div class="container"&#62;
+                  &#60;div class="navbar-header"&#62;
+                    &#60;button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"&#62;
+                      &#60;span class="sr-only"&#62;Navegación toggle&#60;/span&#62;
+                      &#60;span class="icon-bar"&#62;&#60;/span&#62;
+                      &#60;span class="icon-bar"&#62;&#60;/span&#62;
+                      &#60;span class="icon-bar"&#62;&#60;/span&#62;
+                    &#60;/button&#62;
+                    &#60;a class="navbar-brand" href="#"&#62;Practica P2P&#60;/a&#62;
+                  &#60;/div&#62;
+                  &#60;div id="navbar" class="navbar-collapse collapse navbar-right"&#62;
+                    &#60;ul class="nav navbar-nav"&#62;
+                      &#60;li&#62;
+                        &#60;a href="#info1" class="inf"&#62;
+                          &#60;i class="fa fa-home" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Saludos&#60;/span&#62;
+                        &#60;/a&#62;
+                      &#60;/li&#62;
+                      &#60;li&#62;
+                        &#60;a href="#info2" class="inf"&#62;
+                          &#60;i class="fa fa-exclamation" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Destacado&#60;/span&#62;
+                        &#60;/a&#62;
+                      &#60;/li&#62;
+                      &#60;li&#62;
+                        &#60;a href="#info3" class="inf"&#62;
+                          &#60;i class="fa fa-users" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Gente&#60;/span&#62;
+                        &#60;/a&#62;
+                      &#60;/li&#62;
+                      &#60;li class="dropdown"&#62;
+                      &#60;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"&#62;
+                        &#60;i class="fa fa-headphones" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Musica&#60;/span&#62; &#60;span class="caret"&#62;&#60;/span&#62;&#60;/a&#62;
+                      &#60;ul class="dropdown-menu"&#62;
+                        &#60;li&#62;&#60;a href="http://www.lastmusica.com/baladas/" target="_blank"&#62;Balada&#60;/a&#62;&#60;/li&#62;
+                        &#60;li&#62;&#60;a href="http://www.ladiscoteca.org/estilos/disco-funk/" target="_blank"&#62;Disco&#60;/a&#62;&#60;/li&#62;
+                        &#60;li role="separator" class="divider"&#62;&#60;/li&#62;
+                        &#60;li class="dropdown-header"&#62;Popular&#60;/li&#62;
+                        &#60;li&#62;&#60;a href="http://www.fullvicio.com/reggaeton/" target="_blank"&#62;Regueton&#60;/a&#62;&#60;/li&#62;
+                        &#60;li&#62;&#60;a href="http://www.fullvicio.com/pop/" target="_blank"&#62;Pop&#60;/a&#62;&#60;/li&#62;
+                      &#60;/ul&#62;
+                      &#60;/li&#62;
+                      &#60;li&#62;&#60;a href="#info4" class="inf"&#62;&#60;i class="fa fa-mixcloud" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Mixes&#60;/span&#62;&#60;/a&#62;&#60;/li&#62;
+                      &#60;li&#62;&#60;a href="#info5" class="inf"&#62;&#60;i class="fa fa-video-camera" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Videos&#60;/span&#62;&#60;/a&#62;&#60;/li&#62;
+                      &#60;li&#62;&#60;a href="#info6" class="inf"&#62;&#60;i class="fa fa-volume-up" aria-hidden="true"&#62;&#60;/i&#62; &#60;span&#62;Radio&#60;/span&#62;&#60;/a&#62;&#60;/li&#62;
+                      &#60;li&#62;&#60;a href="#info7" class="inf"&#62;&#60;i class="fa fa-question" aria-hidden="true"&#62;&#60;/i&#62;&#60;/a&#62;&#60;/li&#62;
+                    &#60;/ul&#62;
+                  &#60;/div&#62;
+                &#60;/div&#62;
+              &#60;/nav&#62;
+            &#60;/header&#62;
+          </code>
+        </pre>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div id="info4" class="container miriadaX oculto">
       <h3>MÓDULO 6: JQUERY UI. INTERACCIÓN CON USUARIO. BOOTSTRAP. DISEÑO ADAPTATIVO</h3>
       <h2>Entrega P2P obligatoria</h2>
       <h4>Entrega.</h4>
@@ -181,39 +370,6 @@
     </div>
   </section>
 
-  <!-- Three columns of text below the carousel -->
-  <section class="container marketing">
-    <div class="row">
-      <div class="col-lg-4 col-md-4 col-xs-12">
-        <span class="fa-stack fa-lg fa-5x">
-          <i class="fa fa-circle fa-stack-2x text-primary"></i>
-          <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
-        </span>
-        <h2>Calculadora</h2>
-        <p>Una sencilla calculadora hecha con JQuery.</p>
-        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4 col-md-4 col-xs-12">
-        <span class="fa-stack fa-lg fa-5x">
-          <i class="fa fa-circle fa-stack-2x text-success"></i>
-          <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
-        </span>
-        <h2>Tangram</h2>
-        <p>Un pequeño juego hecho con la JQueryUI.</p>
-        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4 col-md-4 col-xs-12">
-        <span class="fa-stack fa-lg fa-5x">
-          <i class="fa fa-circle fa-stack-2x text-warning"></i>
-          <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
-        </span>
-        <h2>Menú Responsivo</h2>
-        <p>Un ejemplo practico del potencial de bootstrap.</p>
-        <p><a class="btn btn-info btn-lg" href="#" role="button">Ver ejemplo &raquo;</a></p>
-      </div>
-    </div><!-- /.col-lg-4 -->
-  </section><!-- /.row -->
-
   <footer>
     <div class="container">
       <div class="row">
@@ -232,11 +388,11 @@
           <div class="col-md-4 col-xs-12">
             <p>Cel: <a href="tel:+519972504989">(51)997 250 489</a><br>
               Lima - Perú</p>
-            <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+              <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-</body>
-</html>
+    </footer>
+  </body>
+  </html>
