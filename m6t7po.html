@@ -6,19 +6,20 @@
   <title>Carrusel</title>
   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
-  <link href="css/m6t7po.css" rel="stylesheet" media="all">
-
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=sons-of-obsidian"></script>
-  <script src="js/calculadora.js" type="text/javascript"></script>
-  <script src="js/tangram.js" type="text/javascript"></script>
+  <script src="js/carrusel.js"></script>
+  <script src="js/calculadora.js"></script>
+  <script src="js/tangram.js"></script>
   <script src="js/m6t7po.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+  <link href="css/m6t7po.css" rel="stylesheet" media="all">
 </head>
 <body>
   <span class="ir-arriba fa fa-arrow-up"></span>
@@ -36,28 +37,28 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse navbar-right">
           <ul class="nav navbar-nav">
-            <li><a href="#info1" class="inf" title="Calculadora JQuery">
+            <li><a href="#info1" class="inf" title="Calculadora JQuery" data-ancla="info1">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-calculator fa-stack-1x fa-inverse"></i>
               </span>
               <span class="textoMenu">Calculadora</span>
             </a></li>
-            <li><a href="#info2" class="inf" title="Tangram JQueryUI">
+            <li><a href="#info2" class="inf" title="Tangram JQueryUI" data-ancla="info2">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
               </span>
               <span class="textoMenu">Tangram</span>
             </a></li>
-            <li><a href="#info3" class="inf" title="Menú bootstrap">
+            <li><a href="#info3" class="inf" title="Menú bootstrap" data-ancla="info3">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-bars fa-stack-1x fa-inverse"></i>
               </span>
               <span class="textoMenu">Menú</span>
             </a></li>
-            <li><a href="#info4" class="inf" title="Información">
+            <li><a href="#info4" class="inf" title="Información" data-ancla="info4">
               <span class="fa-stack">
                 <i class="fa fa-circle fa-stack-2x"></i>
                 <i class="fa fa-question fa-stack-1x fa-inverse"></i>
@@ -72,9 +73,7 @@
 
   <section>
     <!-- Carousel -->
-
     <div id="bootstrap-touch-slider" class="carousel bs-slider slide  control-round indicators-line" data-ride="carousel" data-pause="hover" data-interval="5000" >
-
       <!-- Indicators -->
       <ol class="carousel-indicators">
         <li data-target="#bootstrap-touch-slider" data-slide-to="0" class="active"></li>
@@ -188,6 +187,7 @@
   </section><!-- /.row -->
 
   <section>
+    <a name="info1"></a>
     <div id="info1" class="container calculadora oculto">
       <h2>Calculadora</h2>
       <form>
@@ -251,6 +251,7 @@
   </section>
 
   <section>
+    <a name="info2"></a>
     <div id="info2" class="container oculto">
       <h2>Tangram</h2>
       <p>Sencilla Aplicación de jquery-UI</p>
@@ -272,6 +273,7 @@
   </section>
 
   <section>
+    <a name="info3"></a>
     <div id="info3" class="container oculto">
       <h2>Menú Responsivo</h2>
       <div class="table table-responsive">
