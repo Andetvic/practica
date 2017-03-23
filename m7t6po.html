@@ -17,14 +17,14 @@
 </head>
 <body>
   <section id="caja">
+    <nav>
+      <ul id="selector"></ul>
+    </nav>
     <div id="foto"></div>
     <div class="textos">
       <p id="cita" class="animated bounceInLeft"></p>
       <p id="autor" class="animated bounceInUp"></p>
     </div>
-    <nav>
-      <ul id="selector"></ul>
-    </nav>
   </section>
 
   <div class="editar" id="editar">
@@ -37,9 +37,18 @@
     <div contentEditable="true" id="foto_d"></div>
     <div id="botones">
       <ul>
-        <li><a class="azul" id="guardar"><i class="fa fa-cloud" title="Almacenar"></i></a></li>
-        <li><a class="verde" id="nuevo"><i class="fa fa-plus" title="Cita nueva"></i></a></li>
-        <li><a class="rojo" id="borrar"><i class="fa fa-trash" title="Eliminar cita"></i></a></li>
+        <li><a id="guardar"><span class="fa-stack fa-lg" title="Almacenar">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+        </span></a></li>
+        <li><a id="nuevo"><span class="fa-stack fa-lg" title="Cita nueva">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+        </span></a></li>
+        <li><a id="borrar"><span class="fa-stack fa-lg" title="Eliminar cita">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+        </span></a></li>
       </ul>
     </div>
   </section>
