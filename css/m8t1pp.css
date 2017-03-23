@@ -21,6 +21,7 @@ header h1 {
   width: 285px;
   height: 285px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .cronometro div p {
   margin-top: 95px;
