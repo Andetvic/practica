@@ -10,12 +10,11 @@ header h1 {
 .cronometro {
   text-align: center;
 }
-.cronometro div {
+#dale {
   border-style: solid;
   border-color: #000;
   border-width: 7px;
   display: block;
-  font-size: 72px;
   padding: 0px;
   margin: 20px auto;
   width: 285px;
@@ -23,9 +22,15 @@ header h1 {
   border-radius: 50%;
   cursor: pointer;
 }
-.cronometro div p {
+.semi {
+  font-size: 66px;
   margin-top: 95px;
+  margin-bottom: 0px;
   -webkit-margin-before: 1.32em;
+}
+.mili {
+  font-size: 31px;
+  margin-top: 0px;
 }
 .cronometro button {
   background-color: #fff;
@@ -36,4 +41,13 @@ header h1 {
   margin: 0px;
   padding: 0px;
   width: 49%;
+}
+.marco {
+  margin: auto;
+  max-width: 480px;
+  text-align: center;
+}
+.marco i {
+  display: block;
+  margin: 10px;
 }
