@@ -83,14 +83,16 @@ $(function (){
 
   // Función guardar array
   $("#guardar").on("click", function(){
-    galeria[actual].autor=$("#autor_d").html();
-    galeria[actual].cita=$("#cita_d").html();
-    galeria[actual].foto=$("#foto_d").html();
+    $("#datos").css("display", "none");
+    galeria[actual].autor = $("#autor_d").html();
+    galeria[actual].cita = $("#cita_d").html();
+    galeria[actual].foto = $("#foto_d").html();
     select(actual);
   })
 
   // Función borrar array
   $("#borrar").on("click", function(){
+    $("#datos").css("display", "none");
     galeria.splice(actual,1);
     if(galeria.length===0){
       $("#cita").html(" ");
