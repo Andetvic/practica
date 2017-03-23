@@ -3,14 +3,28 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 20px;
 }
+header h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
 .cronometro {
   text-align: center;
 }
-.cronometro p {
+.cronometro div {
+  border-style: solid;
+  border-color: #000;
+  border-width: 7px;
   display: block;
   font-size: 72px;
   padding: 0px;
-  margin: 50px auto;
+  margin: 20px auto;
+  width: 285px;
+  height: 285px;
+  border-radius: 50%;
+}
+.cronometro div p {
+  margin-top: 95px;
+  -webkit-margin-before: 1.32em;
 }
 .cronometro button {
   background-color: #fff;
