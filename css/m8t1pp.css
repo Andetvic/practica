@@ -10,7 +10,7 @@ header h1 {
 .cronometro {
   text-align: center;
 }
-#dale {
+.dale {
   border-style: solid;
   border-color: #000;
   border-width: 7px;
