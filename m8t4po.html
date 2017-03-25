@@ -38,7 +38,7 @@
         <i class="fa fa-pencil fa-2x" title="Editar"></i>
       </a>
       <a class="btn btn-info inf" href="#info3">
-        <i class="fa fa-question-circle fa-2x" title="Instrucciones"></i>
+        <i class="fa fa-question fa-2x" title="Instrucciones"></i>
       </a>
     </div>
 
@@ -57,23 +57,21 @@
     </section>
 
     <section id="info2" class="container oculto">
-      <div class="">
-        <div contentEditable="true" id="autor_d"></div>
-        <div contentEditable="true" id="cita_d"></div>
-        <div contentEditable="true" id="foto_d"></div>
+      <div class="datos">
+        <h3>Editar</h3>
+        <div contentEditable="true" data-placeholder="Agrega un autor." id="autor_d"></div>
+        <div contentEditable="true" data-placeholder="Agrega una cita." id="cita_d"></div>
+        <div contentEditable="true" data-placeholder="Agrega una URL de una imagen." id="foto_d"></div>
         <div id="botones">
-          <a id="guardar"><span class="fa-stack fa-lg" title="Almacenar">
-              <i class="fa fa-square fa-stack-2x"></i>
-              <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
-            </span></a>
-          <a id="nuevo"><span class="fa-stack fa-lg" title="Cita nueva">
-              <i class="fa fa-square fa-stack-2x"></i>
-              <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
-            </span></a>
-          <a id="borrar"><span class="fa-stack fa-lg" title="Eliminar cita">
-              <i class="fa fa-square fa-stack-2x"></i>
-              <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
-            </span></a>
+          <a id="guardar" title="Almacenar" class="btn btn-info">
+              <i class="fa fa-cloud fa-2x"></i>
+          </a>
+          <a id="nuevo" title="Cita nueva" class="btn btn-success">
+              <i class="fa fa-plus fa-2x"></i>
+          </a>
+          <a id="borrar" title="Eliminar cita" class="btn btn-danger">
+              <i class="fa fa-trash fa-2x"></i>
+          </a>
         </div>
       </div>
     </section>
