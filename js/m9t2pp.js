@@ -10,9 +10,9 @@ $(function(){
       // destino en coordenadas del click o toque actual
       destination: [e.latLng.lat(), e.latLng.lng()],
       travelMode: 'driving',
-      strokeColor: '#000000',
+      strokeColor: '#d34836',
       strokeOpacity: 0.6,
-      strokeWeight: 5
+      strokeWeight: 4
     });
 
     lat = e.latLng.lat();   // guarda coords para marca siguiente
@@ -36,8 +36,8 @@ $(function(){
         });
         map.addMarker({ lat: lat, lng: lng});  // marcador en [lat, lng]
       },
-      error: function(error) { alert('Geolocalización falla: '+error.message); },
-      not_supported: function(){ alert("Su navegador no soporta geolocalización"); },
+      error: function(error) { alert('Ahí un error en la Geolocalización: '+error.message); },
+      not_supported: function(){ alert("Su navegador no soporta geolocalización, o no a brindado los permisos para que la geolocalización funcione"); },
     });
   };
 
