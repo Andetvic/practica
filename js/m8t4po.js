@@ -129,14 +129,14 @@ $(function (){
     localStorage.galeriaactual=JSON.stringify(galeria);
   })
 
-  // botón inicializar galería
-    $("#restablecer").on("click", function(){
-    localStorage.galeriaactual=JSON.stringify(galeriainicial);
+  // botón restablecer galería
+  $("#restablecer").on("click", function(){
+    localStorage.galeriaactual=JSON.stringify(galeriaInicial);
     galeria=JSON.parse(localStorage.galeriaactual);
+    generar_selector();
     $(".oculto").hide();
     select(0);
-    })
- //hasta aquí
+  })
 
   select(0);
 });
