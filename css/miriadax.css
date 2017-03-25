@@ -1,0 +1,16 @@
+.miriadaX h3 {
+  background-color: #e0e0e0;
+  border-top: #2e2e2e solid 2px;
+  font-weight: bold;
+  min-height: 25px;
+  padding: 12px 0 12px 25px;
+}
+.miriadaX h2, .miriadaX h4 {
+  color: #00b5cc;
+  font-weight: bold;
+}
+.miriadaX h4 {
+  font-size: 1.5em;
+}
+.miriadaX li{list-style-type: none;}
+.miriadaX li:before{content: "- ";margin-left: -10px;}

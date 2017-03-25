@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frases Celebres Ver 2</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+    <link href="css/miriadax.css" rel="stylesheet" media="all">
+    <link href="css/m8t4po.css" rel="stylesheet" media="all">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/m8t4po.js"></script>
+  </head>
+  <body>
+    <div class="clearfix">
+      <section id="caja">
+        <nav>
+          <ul id="selector"></ul>
+        </nav>
+        <div id="foto"></div>
+        <div class="textos">
+          <p id="cita" class="animated bounceInLeft"></p>
+          <p id="autor" class="animated bounceInUp"></p>
+        </div>
+      </section>
+    </div>
+
+    <div class="editar">
+      <a class="btn btn-warning inf" href="#info1">
+        <i class="fa fa fa-undo fa-2x" title="Restablecer"></i>
+      </a>
+      <a class="btn btn-success inf" href="#info2">
+        <i class="fa fa-pencil fa-2x" title="Editar"></i>
+      </a>
+      <a class="btn btn-info inf" href="#info3">
+        <i class="fa fa-question-circle fa-2x" title="Instrucciones"></i>
+      </a>
+    </div>
+
+    <section id="info1" class="container oculto">
+      <div class="">
+        <div class="row">
+          <div class="marco">
+            <h3><i class="fa fa-exclamation-triangle text-danger"></i> Advertencia!</h3>
+            <p>Realmente quieres restaurar la Galería a sus valores iniciales?</p>
+            <p>Todos los cambios realizados se eliminaran.</p>
+            <a class="btn btn-success inf" id="restablecer"><i class="fa fa-retweet"></i> Restaurar</a>
+            <a class="btn btn-primary inf" href="#info1"><i class="fa fa-sign-out"></i>Cerrar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info2" class="container oculto">
+      <div class="">
+        <div contentEditable="true" id="autor_d"></div>
+        <div contentEditable="true" id="cita_d"></div>
+        <div contentEditable="true" id="foto_d"></div>
+        <div id="botones">
+          <a id="guardar"><span class="fa-stack fa-lg" title="Almacenar">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-cloud fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a id="nuevo"><span class="fa-stack fa-lg" title="Cita nueva">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-plus fa-stack-1x fa-inverse"></i>
+            </span></a>
+          <a id="borrar"><span class="fa-stack fa-lg" title="Eliminar cita">
+              <i class="fa fa-square fa-stack-2x"></i>
+              <i class="fa fa-trash fa-stack-1x fa-inverse"></i>
+            </span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="info3" class="container oculto">
+      <div class="miriadaX">
+        <h3>MÓDULO 8: LOCALSTORAGE, IFRAMES, ORIGIN POLICY Y JSON</h3>
+        <h2>Entrega P2P obligatoria</h2>
+        <h4>Entrega.</h4>
+        <p>Añadir a la aplicación, con el el carrusel de citas editable, la funcionalidad de guardar la base de datos serializada en JSON en localStorage, de forma que al cargar la aplicación en un navegador, está deberá detectar si existe una base de datos de citas almacenada en localStorage y si es así deberá presentar está en vez de las citas de la galería incluidas en el código de la aplicación.</p>
+        <p>De esta forma los cambios realizados a la base de datos inicial de citas (edición, añadir o borrado)   quedarán guardados en localStorage y estarán disponibles cuando se vuelva a abrir la aplicación en ese mismo navegador.</p>
+        <p>Añadir además un botón que regenere las citas iniciales de la aplicación, eliminando los cambios introducidos. El botón debe pedir confirmación (con la funcion confirm("msj") o con un componente/widget dialogo de jQuery UI) y avisar en el mensaje ("msj") del pop-up de lo que va a hacer, para que el usuario sea consciente de que borra todos los cambios.</p>
+        <p>Este nuevo botón deberá colocarse en una posición que se relacione con la base de datos de citas y no con una cita en particular. Buscar un icono SVG adecuado en Internet.</p>
+        <p>Subir la nueva aplicación de citas a la cuenta de neocities.org</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

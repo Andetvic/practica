@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <section>
+      MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.
+      Ejercicio P2P opcional
+
+      Modificar la aplicación con geolocalización en Google Maps para que:
+
+      Cuando se cierra la App, guardar la ruta en una variable de localStorage.
+      Para que al volver a abrirla reproduzca la ruta anterior, en vez de cargar un mapa limpio, como hace ahora.
+
+
+      Además se debe incluir un boton de inicializar:
+      Que cargue un mapa limpio centrado en nuestra posición, colocando un marcador en dicho punto.
+
+      Recomendación: guardar la ruta como un array de posiciones:
+
+      Donde cada posición es un array de [lat, lng]
+      Ejemplo: [[-1.040, 11.029], [0.040, 10.029], [5.040, 12.030]]
+      Guardar el array en localStorage serializado con JSON.stringify
+      Recuperarlo de localStorage deserializando con JSON.parse
+
+
+      Publicar la App como aplicaciones hosted y packaged en el directorio público de Google Drive, y comprobar que se instala correctamente en el simulador de FirefoxOS
+    </section>
+  </body>
+</html>
