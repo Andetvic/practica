@@ -2,31 +2,53 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Geo-localización</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+    <link href="css/miriadax.css" rel="stylesheet" media="all">
+    <link href="css/m9t2pp.css" rel="stylesheet" media="all">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js"></script>
+    <script src="js/m9t2pp.js"></script>
   </head>
   <body>
+    <header>
+      <h1>Geolocalización</h1>
+    </header>
+
     <section>
-      MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.
-      Ejercicio P2P opcional
+      <div id="map"></div>
+    </section>
 
-      Modificar la aplicación con geolocalización en Google Maps para que:
+    <section>
+      <div class="container miriadaX">
+        <h3>MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.</h3>
+        <h2>Ejercicio P2P opcional</h2>
 
-      Cuando se cierra la App, guardar la ruta en una variable de localStorage.
-      Para que al volver a abrirla reproduzca la ruta anterior, en vez de cargar un mapa limpio, como hace ahora.
-
-
-      Además se debe incluir un boton de inicializar:
-      Que cargue un mapa limpio centrado en nuestra posición, colocando un marcador en dicho punto.
-
-      Recomendación: guardar la ruta como un array de posiciones:
-
-      Donde cada posición es un array de [lat, lng]
-      Ejemplo: [[-1.040, 11.029], [0.040, 10.029], [5.040, 12.030]]
-      Guardar el array en localStorage serializado con JSON.stringify
-      Recuperarlo de localStorage deserializando con JSON.parse
-
-
-      Publicar la App como aplicaciones hosted y packaged en el directorio público de Google Drive, y comprobar que se instala correctamente en el simulador de FirefoxOS
+        <p>Modificar la aplicación con geolocalización en Google Maps para que:</p>
+        <ul class="lista">
+          <li>Cuando se cierra la App, guardar la ruta en una variable de localStorage.</li>
+          <li>Para que al volver a abrirla reproduzca la ruta anterior, en vez de cargar un mapa limpio, como hace ahora.</li>
+        </ul>
+        <p>Además se debe incluir un boton de inicializar:</p>
+        <ul class="lista">
+          <li>Que cargue un mapa limpio centrado en nuestra posición, colocando un marcador en dicho punto.</li>
+        </ul>
+        <p><strong>Recomendación:</strong> guardar la ruta como un array de posiciones:</p>
+        <ul class="lista">
+          <li>Donde cada posición es un array de [lat, lng]</li>
+          <li>Ejemplo: [[-1.040, 11.029], [0.040, 10.029], [5.040, 12.030]]</li>
+          <li>Guardar el array en localStorage serializado con JSON.stringify</li>
+          <li>Recuperarlo de localStorage deserializando con JSON.parse</li>
+        </ul>
+        <p>Publicar la App como aplicaciones hosted y packaged en el directorio público de Google Drive, y comprobar que se instala correctamente en el simulador de FirefoxOS</p>
+      </div>
     </section>
   </body>
 </html>
