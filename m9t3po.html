@@ -2,23 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Geo-localización Ver.2</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
+    <link href="css/miriadax.css" rel="stylesheet" media="all">
+    <link href="css/m9t2pp.css" rel="stylesheet" media="all">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key=AIzaSyCpyLC5PRAtV-GmFAibC2JflWzyJafbytA"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js"></script>
+    <script src="js/m9t2pp.js"></script>
   </head>
   <body>
-    <section>
-      MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.
-      Entrega P2P obligatoria
-      Entrega.
-      Modificar la aplicación de calculo de rutas geolocalizada en Google Maps, añadiendo un botón de “compactar” las rutas mostradas. Al pulsar el boton se deben eliminar los puntos intermedios de la ruta.
+    <header>
+      <div class="cabecera">
+        <h1><i class="fa fa-map-marker rojo"></i> Geolocalización 1.1</h1>
+      </div>
+    </header>
 
-      La ruta se compactará volviendo a visualizar el mapa limpio y mostrando sobre él solo los puntos inicial y final, junto con la ruta directa que los une.
-
-      Recomendación: Crear una variable nueva que guarde en todo momento el punto inicial de la ruta. La variable se iniciará en el momento de cargar la aplicación y guardará el origen de la ruta para cuando haya que compactar.
-
-      Al pulsar "compactar" se visualizará el mapa limpio, se pondrán los marcadores inicial (variable nueva) y final (“lat”, “long”) y se mostrará la ruta entre ellos.
-
-      Subir dicha aplicación a la cuenta de neocities.org
+    <section class="mapa">
+      <div id="map"></div>
     </section>
-    
+
+    <section>
+      <div class="container miriadaX">
+        <h3>MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.</h3>
+        <h2>Entrega P2P obligatoria</h2>
+        <h4>Entrega.</h4>
+        <p>Modificar la aplicación de calculo de rutas geolocalizada en Google Maps, añadiendo un botón de “compactar” las rutas mostradas. Al pulsar el boton se deben eliminar los puntos intermedios de la ruta.</p>
+        <p>La ruta se compactará volviendo a visualizar el mapa limpio y mostrando sobre él solo los puntos inicial y final, junto con la ruta directa que los une.</p>
+        <p><strong>Recomendación:</strong> Crear una variable nueva que guarde en todo momento el punto inicial de la ruta. La variable se iniciará en el momento de cargar la aplicación y guardará el origen de la ruta para cuando haya que compactar.</p>
+        <p>Al pulsar "compactar" se visualizará el mapa limpio, se pondrán los marcadores inicial (variable nueva) y final (“lat”, “long”) y se mostrará la ruta entre ellos.</p>
+        <p>Subir dicha aplicación a la cuenta de neocities.org</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="pie">
+        <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
+      </div>
+    </footer>
   </body>
 </html>
