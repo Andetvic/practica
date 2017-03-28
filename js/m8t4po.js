@@ -28,8 +28,8 @@ var galeriaInicial =
 
 var t, actual;
 
-localStorage.galeriaactual = localStorage.galeriaactual || JSON.stringify(galeriaInicial);
-galeria = JSON.parse(localStorage.galeriaactual);
+localStorage.galeriaActual = localStorage.galeriaActual || JSON.stringify(galeriaInicial);
+galeria = JSON.parse(localStorage.galeriaActual);
 
 function select(i){
    actual = i;
@@ -57,6 +57,8 @@ function generar_selector(){ // regenera la botonera
 }
 
 $(function (){
+  generar_selector();
+
   $(".oculto").hide();
   $(".inf").click(function(){
     var nodo = $(this).attr("href");
@@ -71,17 +73,13 @@ $(function (){
     }
   });
 
-  generar_selector();
-
-  if($('#info2').is(':visible')){editar()}
-
-  function editar() {
+  $('#info2').on("click", function(){
+    select(actual);
     clearTimeout(t);
-
     $("#autor_d").html(galeria[actual].autor);
     $("#cita_d").html(galeria[actual].cita);
     $("#foto_d").html(galeria[actual].foto);
-  }
+  })
 
   // Función agrega array
   $("#nuevo").on("click", function(){
@@ -90,22 +88,21 @@ $(function (){
       cita:$("#cita_d").html(),
       foto:$("#foto_d").html()
     }) - 1;
-
     generar_selector();
 
+    localStorage.galeriaActual=JSON.stringify(galeria);
     select(actual);
-
-    localStorage.galeriaactual=JSON.stringify(galeria);
   })
 
   // Función guardar array
   $("#guardar").on("click", function(){
+    select(actual);
     $(".oculto").hide();
     galeria[actual].autor = $("#autor_d").html();
     galeria[actual].cita = $("#cita_d").html();
     galeria[actual].foto = $("#foto_d").html();
-    select(actual);
-    localStorage.galeriaactual=JSON.stringify(galeria);
+
+    localStorage.galeriaActual=JSON.stringify(galeria);
   })
 
   // Función borrar array
@@ -126,13 +123,14 @@ $(function (){
       generar_selector();
       select(actual);
     }
-    localStorage.galeriaactual=JSON.stringify(galeria);
+    localStorage.galeriaActual=JSON.stringify(galeria);
+    select(actual);
   })
 
   // botón restablecer galería
   $("#restablecer").on("click", function(){
-    localStorage.galeriaactual=JSON.stringify(galeriaInicial);
-    galeria=JSON.parse(localStorage.galeriaactual);
+    localStorage.galeriaActual=JSON.stringify(galeriaInicial);
+    galeria=JSON.parse(localStorage.galeriaActual);
     generar_selector();
     $(".oculto").hide();
     select(0);
@@ -140,3 +138,15 @@ $(function (){
 
   select(0);
 });
+
+$("#anterior").click(function(){if (i<0) {
+  select(0)
+}else {
+  select(i--)
+}})
+
+$("#siguiente").click(function(){if (i>galeria.length) {
+  select(0)
+}else {
+  select(i++)
+}})
