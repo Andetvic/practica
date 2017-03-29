@@ -26,24 +26,33 @@ var galeriaInicial =
    }
 ];
 
-var t, actual;
+var t;
+var actual = 0;
 
 localStorage.galeriaActual = localStorage.galeriaActual || JSON.stringify(galeriaInicial);
 galeria = JSON.parse(localStorage.galeriaActual);
 
 function select(i){
-   actual = i;
+   actual = i ? i : 0;
+   
+   var indice = galeria[actual];
+   var autor = indice.autor;
+   var cita = indice.cita;
+   var foto = indice.foto;
 
    $("nav a")
      .removeClass("on off")
      .addClass(function(j){return(j===i)?"on":"off";});
+	
+	cita = '<p id="cita" class="animated bounceInLeft">'+cita+'</p>';
+	autor = '<p id="autor" class="animated bounceInUp">'+autor+'</p>';
+   $(".textos").html(cita + autor);
+   $("#foto").css("background-image", "url("+foto+")");
 
-   $("#autor").html(galeria[i].autor);
-   $("#cita").html(galeria[i].cita);
-   $("#foto").css("background-image", "url("+galeria[i].foto+")");
-
+   try{
    clearTimeout(t);
-   t = setTimeout( function(){select((i + 1) % galeria.length);}, 4000);
+   }catch(e){}
+   t = setTimeout( function(){select((actual + 1) % galeria.length);}, 4000);
  }
 
 function generar_selector(){ // regenera la botonera
@@ -73,13 +82,13 @@ $(function (){
     }
   });
 
-  $('#info2').on("click", function(){
+  $('#refInfo2').on("click", function(){
     select(actual);
     clearTimeout(t);
     $("#autor_d").html(galeria[actual].autor);
     $("#cita_d").html(galeria[actual].cita);
     $("#foto_d").html(galeria[actual].foto);
-  })
+  });
 
   // Función agrega array
   $("#nuevo").on("click", function(){
@@ -92,7 +101,7 @@ $(function (){
 
     localStorage.galeriaActual=JSON.stringify(galeria);
     select(actual);
-  })
+  });
 
   // Función guardar array
   $("#guardar").on("click", function(){
@@ -103,7 +112,7 @@ $(function (){
     galeria[actual].foto = $("#foto_d").html();
 
     localStorage.galeriaActual=JSON.stringify(galeria);
-  })
+  });
 
   // Función borrar array
   $("#borrar").on("click", function(){
@@ -125,7 +134,7 @@ $(function (){
     }
     localStorage.galeriaActual=JSON.stringify(galeria);
     select(actual);
-  })
+  });
 
   // botón restablecer galería
   $("#restablecer").on("click", function(){
@@ -134,19 +143,23 @@ $(function (){
     generar_selector();
     $(".oculto").hide();
     select(0);
-  })
+  });
+  
+$("#anterior").on("click", function(){
+	actual = actual - 1;
+	if (actual < 0) {
+		actual = galeria.length;
+	}
+	select(actual);
+});
+
+$("#siguiente").on("click", function(){
+	actual = actual + 1;
+	if ( actual > galeria.length) {
+		actual = 0;
+	}
+	select(actual);
+});
 
   select(0);
 });
-
-$("#anterior").click(function(){if (i<0) {
-  select(0)
-}else {
-  select(i--)
-}})
-
-$("#siguiente").click(function(){if (i>galeria.length) {
-  select(0)
-}else {
-  select(i++)
-}})
