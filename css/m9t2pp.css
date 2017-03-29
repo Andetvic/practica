@@ -30,13 +30,18 @@ body{
   overflow: auto;
 }
 
-.menu {list-style-type: none; margin: 0; padding: 0}
-.menu li {display: inline-block;}
+.menu {display: inline-block; list-style-type: none; margin: 0; padding: 0}
+.menu li {display: inline-block; margin-left: 10px;}
 .rojo {color: #d34836;}
 .mapa {
   position: relative;
   height: 100%;
   overflow: auto;
+}
+.inicio {
+  background: #fff;
+  position: absolute;
+  width: 100%;
 }
 .cabecera {
   padding: 0px 10px;
@@ -48,6 +53,7 @@ body{
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: right;
+  font-weight: lighter;
 }
 .contenedor {
   margin: 20px auto;
@@ -55,6 +61,11 @@ body{
   padding: 10px;
   position: relative;
   max-width: 800px;
+}
+.fin {
+  background: #fff;
+  position: absolute;
+  width: 100%;
 }
 .pie {
   padding: 0px 10px;
