@@ -21,17 +21,32 @@
       <nav class="cabecera">
         <h1><i class="fa fa-map-marker rojo"></i> Geolocalización</h1>
         <ul class="menu">
-          <li><a class="inf" href="#info1"><i class="fa fa-map-marker"></i></a></li>
-          <li><a class="inf" href="#info2"><i class="fa fa-question-circle"></i></a></li>
+          <li><a href="#info1" id="btn1"><i class="fa fa-map-marker"></i></a></li>
+          <li><a href="#info2" id="btn2"><i class="fa fa fa-retweet"></i></a></li>
+          <li><a href="#info3" id="btn3"><i class="fa fa-question-circle"></i></a></li>
         </ul>
       </nav>
     </header>
 
-    <section id="info1" class="mapa oculto">
+    <section id="info1" class="mapa">
       <div id="map"></div>
     </section>
 
-    <section id="info2" class="contenedor oculto">
+    <section id="info2" class="contenedor">
+      <div class="">
+        <div class="row">
+          <div class="marco">
+            <h3><i class="fa fa-exclamation-triangle text-danger"></i> Advertencia!</h3>
+            <p>¿Realmente quieres restaurar los puntos de localización al valor inicial?</p>
+            <p>Todos los puntos marcados seran eliminados.</p>
+            <a class="inf" id="restablecer"><i class="fa fa-retweet"></i> Restaurar</a>
+            <a class="inf" href="#info1"><i class="fa fa-sign-out"></i>Cerrar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info3" class="contenedor">
       <div class="container miriadaX">
         <h3>MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.</h3>
         <h2>Ejercicio P2P opcional</h2>
