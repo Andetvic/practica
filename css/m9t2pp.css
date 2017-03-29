@@ -1,6 +1,8 @@
 html,body {
+  height: 100%;
   margin: 0px;
   padding: 0px;
+  width: 100%;
 }
 body{
   font-family: 'Droid Sans', 'Helvetica', Arial, sans-serif;
@@ -11,7 +13,7 @@ body{
   margin: 0;
   padding: 0;
   position: absolute; /* posición absoluta a navegador */
-  top: 0;             /* ajusta a borde de navegador */
+  top: 0; /* ajusta a borde de navegador */
   left: 0;
   right: 0;
   height: 50px;
@@ -24,14 +26,16 @@ body{
   position: absolute; /* posición absoluta a navegador */
   background-color: rgba(0,0,0,0); /* verde si no hay mapa */
   width: 100%;
-  height: 400px;
+  height: 100%;
   overflow: auto;
 }
 
+.menu {list-style-type: none; margin: 0; padding: 0}
+.menu li {display: inline-block;}
 .rojo {color: #d34836;}
 .mapa {
   position: relative;
-  height: 400px;
+  height: 100%;
   overflow: auto;
 }
 .cabecera {
@@ -40,6 +44,7 @@ body{
   max-width: 800px;
 }
 .cabecera h1 {
+  display: inline-block;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: right;

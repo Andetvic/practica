@@ -11,23 +11,27 @@
     <link href="css/miriadax.css" rel="stylesheet" media="all">
     <link href="css/m9t2pp.css" rel="stylesheet" media="all">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCpyLC5PRAtV-GmFAibC2JflWzyJafbytA"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js"></script>
-    <script src="js/m9t3po.js"></script>
+    <script src="js/m9t2pp.js"></script>
   </head>
   <body>
     <header>
-      <div class="cabecera">
+      <nav class="cabecera">
         <h1><i class="fa fa-map-marker rojo"></i> Geolocalización</h1>
-      </div>
+        <ul class="menu">
+          <li><a class="inf" href="#info1"><i class="fa fa-map-marker"></i></a></li>
+          <li><a class="inf" href="#info2"><i class="fa fa-question-circle"></i></a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="mapa">
+    <section id="info1" class="mapa oculto">
       <div id="map"></div>
     </section>
 
-    <section class="contenedor">
+    <section id="info2" class="contenedor oculto">
       <div class="container miriadaX">
         <h3>MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.</h3>
         <h2>Ejercicio P2P opcional</h2>
