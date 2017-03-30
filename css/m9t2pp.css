@@ -30,7 +30,7 @@ body{
   overflow: auto;
 }
 
-.menu {display: inline-block; line-height: 29px; list-style-type: none; margin: 0; padding: 0}
+.menu {display: inline-block; line-height: 29px; list-style-type: none; margin-left: 10px; padding: 0}
 .menu li {
   background: rgba(183,222,237,1);
   background: -moz-linear-gradient(-45deg, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 50%, rgba(33,180,226,1) 51%, rgba(183,222,237,1) 100%);
@@ -42,7 +42,7 @@ body{
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b7deed', endColorstr='#b7deed', GradientType=1 );
   border-radius: 5px;
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 1px;
   width: 36px;
   height: 30px;
   text-align: center;
@@ -134,4 +134,28 @@ body{
   background: -ms-linear-gradient(top, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
   background: linear-gradient(to bottom, rgba(248,80,50,1) 0%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(240,47,23,1) 71%, rgba(231,56,39,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827', GradientType=0 );
+}
+.chiquito {font-size: 10px;}
+.kbd {
+  padding: 2px 4px;
+  color: #fff;
+  background-color: #333;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+  text-decoration: none;
+}
+@media only screen and (max-width: 480px) {
+  .menu li {
+    width: 26px;
+    height: 26px;
+    font-size: 18px;
+  }
+  .menu li a {
+    line-height: 25px;
+    padding: 5px 4px;
+  }
+  .no-movil {
+    display: none;
+  }
 }
