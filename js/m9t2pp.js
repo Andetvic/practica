@@ -4,8 +4,30 @@ var posicionGEO = [];
 localStorage.posiciones = (localStorage.posiciones || "");
 
 $(function(){
-  $('#info2').hide();
-  $('#info3').hide();
+  $('.oculto').hide();
+
+  if (($('#info1').attr('class','oculto')?true:false)==false) {
+    $('#info1').hide();
+  } else {
+    $('#info1').show();
+  }
+  function primeramente() {
+    $('#info1').show();
+    $('#info2').hide();
+    $('#info3').hide();
+  }
+  $('#btn1').on('click',primeramente);
+  $('#btn2').on('click',function(){
+    $('#info1').hide();
+    $('#info2').show();
+    $('#info3').hide();
+  });
+  $('#btn3').on('click',function(){
+    $('#info1').hide();
+    $('#info2').hide();
+    $('#info3').show();
+  });
+  $('#btn4').on('click',primeramente);
 
   function enlazarMarcador(e){
     var alat, alng;
@@ -38,6 +60,7 @@ $(function(){
     localStorage.posiciones = "";
     posicionGEO = [];
     geolocalizar();
+    location.reload();
   };
 
   function cargar(){
