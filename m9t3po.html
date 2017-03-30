@@ -3,31 +3,66 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Geo-localización Ver.2</title>
+    <title>Geo-localización</title>
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" rel="stylesheet" media="all">
     <link href="css/miriadax.css" rel="stylesheet" media="all">
     <link href="css/m9t2pp.css" rel="stylesheet" media="all">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCpyLC5PRAtV-GmFAibC2JflWzyJafbytA"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gmaps.js/0.4.25/gmaps.min.js"></script>
-    <script src="js/m9t2pp.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/touchjs/0.2.14/touch.min.js"></script>
+
+    <script src="js/m9t3po.js"></script>
   </head>
   <body>
     <header>
-      <div class="cabecera">
+      <nav class="cabecera">
         <h1><i class="fa fa-map-marker rojo"></i> Geolocalización 1.1</h1>
-      </div>
+        <ul class="menu">
+          <li><a href="#info1" id="btn1" title="Mapa"><i class="fa fa-map-marker"></i></a></li>
+          <li><a href="#info4" id="btn5" title="Simplifica Ruta"><i class="fa fa fa-road"></i></a></li>
+          <li><a href="#info2" id="btn2" title="Restablecer"><i class="fa fa fa-refresh"></i></a></li>
+          <li><a href="#info3" id="btn3" title="Información"><i class="fa fa-question-circle"></i></a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="mapa">
+    <section id="info1" class="mapa oculto">
       <div id="map"></div>
     </section>
 
-    <section>
+    <section id="info4" class="contenedor oculto">
+      <div class="">
+        <div class="row">
+          <div class="marco">
+            <h3><i class="fa fa-exclamation-triangle rojo"></i> Advertencia!</h3>
+            <p>¿Realmente quieres simplificar la ruta?</p>
+            <p>Al hacer click se eliminaran todos los puntos marcados entre el punto inicial y el ultimo.</p>
+            <a id="simplificar"><i class="fa fa-road"></i> Simplificar Ruta</a>
+            <a href="#info1" id="btn6"><i class="fa fa-sign-out"></i>Cerrar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info2" class="contenedor oculto">
+      <div class="">
+        <div class="row">
+          <div class="marco">
+            <h3><i class="fa fa-exclamation-triangle rojo"></i> Advertencia!</h3>
+            <p>¿Realmente quieres restaurar los puntos de localización al valor inicial?</p>
+            <p>Todos los puntos marcados seran eliminados.</p>
+            <a id="restablecer"><i class="fa fa-retweet"></i> Restaurar</a>
+            <a href="#info1" id="btn4"><i class="fa fa-sign-out"></i>Cerrar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info3" class="contenedor oculto">
       <div class="container miriadaX">
         <h3>MÓDULO 9: INTRODUCCIÓN A GRÁFICOS Y ANIMACIONES SVG. GEOLOCALIZACIÓN.</h3>
         <h2>Entrega P2P obligatoria</h2>
@@ -36,11 +71,11 @@
         <p>La ruta se compactará volviendo a visualizar el mapa limpio y mostrando sobre él solo los puntos inicial y final, junto con la ruta directa que los une.</p>
         <p><strong>Recomendación:</strong> Crear una variable nueva que guarde en todo momento el punto inicial de la ruta. La variable se iniciará en el momento de cargar la aplicación y guardará el origen de la ruta para cuando haya que compactar.</p>
         <p>Al pulsar "compactar" se visualizará el mapa limpio, se pondrán los marcadores inicial (variable nueva) y final (“lat”, “long”) y se mostrará la ruta entre ellos.</p>
-        <p>Subir dicha aplicación a la cuenta de neocities.org</p>
+        <p>Subir dicha aplicación a la cuenta de <a href="https://neocities.org/">neocities.org</a></p>
       </div>
     </section>
 
-    <footer>
+    <footer class="fin">
       <div class="pie">
         <p>2017 | Design by <a href="mailto:t5t6pe@gmail.com">Terry</a></p>
       </div>
