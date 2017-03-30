@@ -1,5 +1,5 @@
 html,body {
-  height: 94%;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   width: 100%;
@@ -28,6 +28,17 @@ body{
   width: 100%;
   height: 93%;
   overflow: auto;
+}
+#info1 {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  height: 90%;
+}
+#info3 {
+  overflow: auto;
+  zoom: 1;
+  display: block;
 }
 
 .menu {display: inline-block; line-height: 29px; list-style-type: none; margin-left: 10px; padding: 0}
@@ -70,8 +81,13 @@ body{
 }
 .inicio {
   background: #fff;
-  position: absolute;
+  position:absolute; /*El div será ubicado con relación a la pantalla*/
+  left:0px; /*A la derecha deje un espacio de 0px*/
+  right:0px; /*A la izquierda deje un espacio de 0px*/
+  top:0px; /*Abajo deje un espacio de 0px*/
+  height:50px; /*alto del div*/
   width: 100%;
+  z-index:1;
 }
 .cabecera {
   padding: 0px 10px;
@@ -94,12 +110,14 @@ body{
 }
 .fin {
   background: #fff;
-  position: absolute;
+  float: left;
+  position: fixed; /*El div será ubicado con relación a la pantalla*/
+  left: 0px; /*A la derecha deje un espacio de 0px*/
+  right: 0px; /*A la izquierda deje un espacio de 0px*/
+  bottom: 0px; /*Abajo deje un espacio de 0px*/
+  height: 50px; /*alto del div*/
   width: 100%;
-  z-index: 9999;
-  left:0px; /*A la derecha deje un espacio de 0px*/
-  right:0px; /*A la izquierda deje un espacio de 0px*/
-  bottom:0px; /*Abajo deje un espacio de 0px*/
+  z-index:0;
 }
 .pie {
   padding: 0px 10px;
